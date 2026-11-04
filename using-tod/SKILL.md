@@ -67,6 +67,46 @@ state: `create`, `edit`, `change-state`, `link`, `add-comment`,
 `approve`, `request-changes`, `merge`, `discard`, `run` etc. Various
 list/get/show commands do not need consent.
 
+## Querying & Filtering via --query
+
+Commands like `tod pr list --query "..."` and `tod issue list --query "..."` use OneDev's ANTLR structured query grammar.
+
+- **Field names are strictly Title-Cased / Case-Sensitive**:
+  - Pull requests: `"Source Branch" is "..."`, `"Target Branch" is "..."`, `"Source Project" is "..."`, `"Submitter" is "..."`, `"Title" contains "..."`, `"Status" is "OPEN"`.
+    *(Note: Using lowercase like `"source branch"` returns an HTTP 500 error: `Field not found: source branch`)*.
+  - Issues: `"State" is "..."`, `"Type" is "..."`, `"Priority" is "..."`, `"Assignees" is "..."`.
+- **Query Grammar Inspection**:
+  - Run `tod pr get-query-description` or `tod issue get-query-description` to inspect the full ANTLR grammar, supported operators (`is`, `contains`, `and`, `or`, `order by`), and valid criteria keywords.
+
+## Passing Multi-line Markdown Content
+
+When creating or editing issues and pull requests, or adding comments:
+- Avoid passing raw multi-line Markdown directly into `--description` or `--comment` flags, as shell quoting and newlines easily break or corrupt formatting.
+- Always prefer `--description-file -` or `--comment-file -` using `stdin` with a heredoc:
+  ```bash
+  cat << 'EOF' | tod pr edit <ref> --description-file -
+  # Pull Request Description
+  - Point 1
+  - Point 2
+  EOF
+  ```
+- Similarly for state transitions:
+  ```bash
+  tod issue change-state <ref> "<state>" --comment "Rationale here"
+  # Or with multi-line comment:
+  cat << 'EOF' | tod issue change-state <ref> "<state>" --comment-file -
+  Multi-line rationale...
+  EOF
+  ```
+
+## Issue State Transitions & Custom Fields
+
+- **Valid States**:
+  - Typical OneDev states include: `Draft`, `Open`, `In Progress`, `Testing`, `In Review`, `Closed`. Check `tod issue get-query-description` for the exact `StateName` tokens in the project grammar.
+- **Custom Fields**:
+  - Run `tod issue get-valid-fields` (without arguments) to inspect custom fields (such as `Type`, `Priority`, `Effort`, `Deadline`, `Assignees`).
+  - *Do not pass an issue reference* to `tod issue get-valid-fields` (e.g. `tod issue get-valid-fields 123` will error).
+
 ## Issue Creation Template
 
 When the user asks to create an issue, use this description format (without a leading template title line):
