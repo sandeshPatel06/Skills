@@ -22,7 +22,7 @@ This repository contains a curated set of GitHub CLI skills and workflows design
 | [investigate-build-failure](investigate-build-failure/SKILL.md) | Debug a failing build via `tod build get`, `tod build get-log`, and related commands |
 | [edit-build-spec](edit-build-spec/SKILL.md) | Create or update `.onedev-buildspec.yml` using `tod build get-spec-schema` |
 | [generate-commit-message](generate-commit-message/SKILL.md) | Compose a commit message respecting `tod get-commit-message-requirement` |
-| [edit-build-spec](edit-build-spec/SKILL.md) | Create or update `.onedev-buildspec.yml` |
+| [work-like-boss](work-like-boss/SKILL.md) | Senior product-minded execution — source of truth first, anti-slop craft, options then lock |
 
 ## Topics
 
@@ -40,5 +40,5 @@ Each skill directory contains a `SKILL.md` file with detailed instructions, prer
 
 ---
 
-- **Repository**: https://github.com/sandeshPatel06/skills
+- **Repository**: https://github.com/sandeshPatel06/Skills
 - **Author**: sandeshPatel06
