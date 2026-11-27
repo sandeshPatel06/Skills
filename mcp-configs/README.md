@@ -1,99 +1,80 @@
 # MCP Configurations
 
-Complete Model Context Protocol (MCP) server configurations for all AI agents.
+Reference Model Context Protocol (MCP) server configurations. All paths and credentials shown here are **placeholders** — replace them with your own values before use.
+
+> **Security notice:** Never commit real credentials, API tokens, or machine-specific paths to a public repository. Use environment variables or a local `.env` file (added to `.gitignore`) to supply secrets.
 
 ## Available MCP Servers
 
-### 1. **gopls-mcp-server**
+### 1. `gopls-mcp-server`
 - **Purpose**: Go language server for code intelligence
-- **Binary**: `/home/reak/go/bin/gopls mcp`
-- **Used by**: Kilo, VS Code, Cursor
+- **Binary**: `$(go env GOPATH)/bin/gopls mcp` — replace with your actual Go binary path
+- **Used by**: Antigravity, Claude Code, Cursor, VS Code
 
-### 2. **postgres**
+### 2. `postgres`
 - **Purpose**: PostgreSQL database queries and schema introspection
-- **Script**: `.kilo/scripts/run-postgres-mcp.sh`
-- **Used by**: Kilo, VS Code, Cursor
+- **Script**: Place a `run-postgres-mcp.sh` wrapper in your project; point `command` at it
+- **Used by**: Antigravity, Claude Code, Cursor, VS Code
 
-### 3. **typesense**
+### 3. `typesense`
 - **Purpose**: Search engine operations and document queries
-- **Script**: `.kilo/scripts/run-typesense-mcp.sh`
-- **Used by**: Kilo, VS Code, Cursor
+- **Script**: Place a `run-typesense-mcp.sh` wrapper in your project
+- **Used by**: Antigravity, Claude Code, Cursor, VS Code
 
-### 4. **playwright**
+### 4. `playwright`
 - **Purpose**: Browser automation and frontend testing
-- **Script**: `.kilo/scripts/run-playwright-mcp.sh`
-- **Used by**: Kilo, VS Code, Cursor
+- **Script**: Place a `run-playwright-mcp.sh` wrapper in your project
+- **Used by**: Antigravity, Claude Code, Cursor, VS Code
 
-### 5. **kubectl**
+### 5. `kubectl`
 - **Purpose**: Kubernetes cluster management
 - **Command**: `npx -y mcp-server-kubernetes`
-- **Env**: `KUBECONFIG` required
-- **Used by**: Kilo, VS Code, Cursor
+- **Env**: Set `KUBECONFIG` to the path of your kubeconfig file — do **not** hard-code it here
+- **Used by**: Antigravity, Claude Code, Cursor, VS Code
 
-### 6. **filesystem**
-- **Purpose**: File system access and operations
-- **Command**: `npx -y @modelcontextprotocol/server-filesystem`
-- **Used by**: Kilo, VS Code, Cursor
+### 6. `filesystem`
+- **Purpose**: File system access scoped to your project directory
+- **Command**: `npx -y @modelcontextprotocol/server-filesystem /path/to/your/project`
+- **Security**: Restrict the path to the smallest required directory; never use `/home/username` or `/`
+- **Used by**: Antigravity, Claude Code, Cursor, VS Code
 
-### 7. **google-kubernetes-engine**
+### 7. `google-kubernetes-engine`
 - **Purpose**: GKE cluster management via Google Cloud
 - **URL**: `https://container.googleapis.com/mcp`
-- **Auth**: Google credentials
-- **Used by**: Kilo, VS Code, Cursor
+- **Auth**: Google credentials (run `gcloud auth application-default login`)
+- **Used by**: Antigravity, Claude Code, Cursor, VS Code
 
-### 8. **ZohoMCP**
+### 8. `ZohoMCP`
 - **Purpose**: Zoho Cliq messaging integration
 - **Command**: `npx mcp-remote`
-- **URL**: `https://cliqqq-939313492.zohomcp.com/mcp/...`
-- **Used by**: Kilo only
+- **URL**: Obtain your personal MCP endpoint from the Zoho MCP dashboard — format: `https://YOUR_WORKSPACE.zohomcp.com/mcp/YOUR_TOKEN/message`
+- **Security**: Treat the URL as a credential. Store it in an environment variable or `.env` file; never commit the real URL.
+- **Used by**: Antigravity, Claude Code
 
-### 9. **runpod**
+### 9. `runpod`
 - **Purpose**: RunPod GPU cloud operations
 - **URL**: `https://mcp.getrunpod.io/`
-- **Used by**: Cursor, Gemini CLI, Claude Desktop, VS Code
-
-### 10. **GitKraken**
-- **Purpose**: Git integration and code review
-- **Binary**: `/home/reak/.config/Code/User/globalStorage/eamodio.gitlens/gk`
-- **Used by**: Claude Desktop only
+- **Used by**: Cursor, Antigravity, Claude Desktop, VS Code
 
 ## Configuration Files
 
-- `complete-mcp-config.json` - All MCPs in one config (use as reference)
-- Agent-specific configs should be placed in respective agent directories
+- `complete-mcp-config.json` — Template with all servers (all values are placeholders — do not use as-is)
 
-## Agent MCP Status
+## Placement by Agent
 
-| Agent | MCPs Configured | Missing |
-|-------|----------------|---------|
-| **Kilo** | 8/8 | ✅ Complete |
-| **VS Code** | 7/9 | ZohoMCP |
-| **Cursor** | 8/9 | ZohoMCP (has runpod) |
-| **Gemini CLI** | 1/9 | 8 MCPs missing |
-| **Claude Desktop** | 2/9 | 7 MCPs missing |
-| **Claude Code** | 0/9 | All missing |
-| **Gemini Antigravity** | 0/9 | All missing |
+| Agent | Config location |
+|---|---|
+| Antigravity / Gemini CLI | `~/.gemini/config/mcp_config.json` |
+| Claude Code | `~/.claude/mcp_config.json` |
+| Claude Desktop | `~/.config/Claude/claude_desktop_config.json` |
+| Cursor | `~/.config/Cursor/User/mcp_config.json` |
+| VS Code | `~/.config/Code/User/mcp_config.json` |
+| OpenCode | `~/.config/opencode/mcp_config.json` |
 
-## Setup Instructions
+## Security Checklist
 
-### For Kilo (Complete)
-Already configured at `~/.config/kilo/mcp_config.json`
-
-### For VS Code
-Copy to `~/.config/Code/User/mcp_config.json` and add missing MCPs
-
-### For Cursor
-Copy to `~/.config/Cursor/User/mcp_config.json` and add ZohoMCP
-
-### For Gemini CLI
-Copy to `~/.gemini/config/mcp_config.json`
-
-### For Claude Desktop
-Copy to `~/.config/Claude/claude_desktop_config.json`
-
-## Notes
-
-- All configurations use local paths specific to this system
-- Adjust paths when deploying to different systems
-- Credentials are sourced from `/home/reak/.env`
-- Never commit actual credentials to the repository
+- [ ] Replace all `/path/to/...` placeholders with real paths **locally**, not in this file
+- [ ] Store API tokens and MCP URLs in a `.env` file excluded from version control
+- [ ] Add `.env` and any `*_local.json` files to `.gitignore`
+- [ ] Restrict `filesystem` MCP scope to the minimum required directory
+- [ ] Rotate any credentials that were previously committed to a public repository

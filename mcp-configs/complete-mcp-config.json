@@ -1,22 +1,22 @@
 {
   "mcpServers": {
     "gopls-mcp-server": {
-      "command": "/home/reak/go/bin/gopls",
+      "command": "/YOUR_GO_BIN/gopls",
       "args": ["mcp"],
       "env": {}
     },
     "postgres": {
-      "command": "/home/reak/git/cobra-go/app/.kilo/scripts/run-postgres-mcp.sh",
+      "command": "/path/to/your/project/.kilo/scripts/run-postgres-mcp.sh",
       "args": [],
       "env": {}
     },
     "typesense": {
-      "command": "/home/reak/git/cobra-go/app/.kilo/scripts/run-typesense-mcp.sh",
+      "command": "/path/to/your/project/.kilo/scripts/run-typesense-mcp.sh",
       "args": [],
       "env": {}
     },
     "playwright": {
-      "command": "/home/reak/git/cobra-go/app/.kilo/scripts/run-playwright-mcp.sh",
+      "command": "/path/to/your/project/.kilo/scripts/run-playwright-mcp.sh",
       "args": [],
       "env": {}
     },
@@ -24,12 +24,12 @@
       "command": "npx",
       "args": ["-y", "mcp-server-kubernetes"],
       "env": {
-        "KUBECONFIG": "/home/reak/Downloads/div/vke-59f26ce4-2ab1-48cf-9bf0-30a2e21afcd7.yaml"
+        "KUBECONFIG": "/path/to/your/kubeconfig.yaml"
       }
     },
     "filesystem": {
       "command": "npx",
-      "args": ["-y", "@modelcontextprotocol/server-filesystem", "/home/reak"],
+      "args": ["-y", "@modelcontextprotocol/server-filesystem", "/path/to/your/project"],
       "env": {}
     },
     "google-kubernetes-engine": {
@@ -40,7 +40,7 @@
       "command": "npx",
       "args": [
         "mcp-remote",
-        "https://cliqqq-939313492.zohomcp.com/mcp/b15c0199dc27ac287174013b14669856/message",
+        "https://YOUR_WORKSPACE.zohomcp.com/mcp/YOUR_MCP_TOKEN/message",
         "--transport",
         "http-only"
       ]

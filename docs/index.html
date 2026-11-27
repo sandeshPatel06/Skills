@@ -3,19 +3,20 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>sandeshPatel06/Skills — 18 AI Coding Agent Skills &amp; MCP Configs</title>
-  <meta name="description" content="Install 18 first-party AI coding agent skills for Antigravity, Claude Code, Codex, Cursor, and OpenCode. Includes OneDev (tod), UI/UX, and MCP configs.">
+  <meta name="google-site-verification" content="nqitHUh908uqMEZdwsWPS-aIUuQuSeO3wPVCeDA7ZlI" />
+  <title>sandeshPatel06/Skills — 18 AI Agent Skills &amp; MCP Config</title>
+  <meta name="description" content="18 first-party AI coding agent skills for Antigravity, Claude Code, Codex, Cursor, and OpenCode. Inspect SKILL.md specs and copy install commands for OneDev (tod), UI/UX, GitHub CLI, and more.">
   <link rel="canonical" href="https://sandeshpatel06.github.io/Skills/">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="sandeshPatel06/Skills">
   <meta property="og:title" content="sandeshPatel06/Skills — AI Coding Agent Skills Directory">
-  <meta property="og:description" content="18 first-party skills for Antigravity, Claude Code, Codex, Cursor, and OpenCode. Preview SKILL.md in-browser and copy one-click install commands.">
+  <meta property="og:description" content="18 first-party skills for Antigravity, Claude Code, Codex, Cursor, and OpenCode. Preview SKILL.md in-browser and copy install commands.">
   <meta property="og:url" content="https://sandeshpatel06.github.io/Skills/">
   <meta property="og:image" content="https://sandeshpatel06.github.io/Skills/og-image.jpg">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:site" content="@sandeshPatel06">
   <meta name="twitter:title" content="sandeshPatel06/Skills — 18 AI Agent Skills">
-  <meta name="twitter:description" content="Preview SKILL.md specs and copy one-click install commands for Antigravity, Claude Code, Codex, Cursor, and OpenCode.">
+  <meta name="twitter:description" content="Preview SKILL.md specs and copy install commands for Antigravity, Claude Code, Codex, Cursor, and OpenCode.">
   <meta name="twitter:image" content="https://sandeshpatel06.github.io/Skills/og-image.jpg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -25,15 +26,13 @@
     "@context": "https://schema.org",
     "@type": "CollectionPage",
     "name": "sandeshPatel06/Skills",
-    "description": "18 first-party AI coding agent skills and MCP configurations for Antigravity, Claude Code, Codex, Cursor, and OpenCode.",
+    "description": "18 first-party AI coding agent skills and 1 MCP configuration resource for Antigravity, Claude Code, Codex, Cursor, and OpenCode.",
     "url": "https://sandeshpatel06.github.io/Skills/",
     "author": {
       "@type": "Person",
       "name": "sandeshPatel06",
       "url": "https://github.com/sandeshPatel06",
-      "sameAs": [
-        "https://github.com/sandeshPatel06"
-      ]
+      "sameAs": ["https://github.com/sandeshPatel06"]
     }
   }
   </script>
@@ -44,10 +43,18 @@
     "mainEntity": [
       {
         "@type": "Question",
-        "name": "How do I install skills from sandeshPatel06/Skills?",
+        "name": "What is an AI agent skill?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Run npx skills add sandeshPatel06/Skills or clone the repository into your agent's skills directory (~/.gemini/config/skills for Antigravity, ~/.claude/skills for Claude Code, ~/.codex/skills for Codex, .cursor/skills for Cursor, or ~/.config/opencode/skills for OpenCode)."
+          "text": "An AI agent skill is a SKILL.md file that tells AI coding assistants (like Antigravity, Claude Code, Codex, Cursor, or OpenCode) how to perform a specific development task — such as reviewing pull requests, generating commit messages, or managing OneDev issues. Install a skill into your agent's skills directory and it becomes available as a command."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How do I install a skill from sandeshPatel06/Skills?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Clone the full repository into your agent's skills directory, or use npx degit to install a single skill. For Antigravity: git clone https://github.com/sandeshPatel06/Skills.git ~/.gemini/config/skills. For Claude Code: git clone into ~/.claude/skills. For Cursor: clone into .cursor/skills inside your project. For OpenCode: clone into ~/.config/opencode/skills. Use npx skills add sandeshPatel06/Skills for the Skills CLI."
         }
       },
       {
@@ -55,7 +62,7 @@
         "name": "Which AI coding agents are supported?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "All 18 skills follow the open SKILL.md format and work with Antigravity, Claude Code, OpenAI Codex, Cursor, and OpenCode."
+          "text": "All 18 skills follow the open SKILL.md format and are tested with Antigravity, Claude Code, OpenAI Codex, Cursor, and OpenCode. The mcp-configs resource is a configuration template, not an installable skill."
         }
       },
       {
@@ -63,7 +70,7 @@
         "name": "What categories of skills are included?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "The repository includes 13 OneDev (tod CLI) workflow skills, 2 UI/UX and anti-slop frontend skills, 2 engineering workflow skills (work-like-boss and gh-tasks), and Zoho Cliq MCP plus MCP server configs."
+          "text": "13 OneDev and tod CLI workflow skills, 2 UI/UX and anti-slop frontend skills, 2 engineering and workflow skills (work-like-boss and gh-tasks), and 1 Zoho Cliq MCP skill. There is also 1 MCP server configuration template resource."
         }
       }
     ]
@@ -80,797 +87,705 @@
       --accent: #0052FF;
       --accent-hover: #0040CC;
       --ok: #0E7C47;
+      --err: #C0392B;
       --mono: 'IBM Plex Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
       --sans: 'Space Grotesk', system-ui, -apple-system, sans-serif;
     }
     *, *::before, *::after { box-sizing: border-box; }
     html { scroll-behavior: smooth; }
-    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
-    body {
-      margin: 0;
-      background: var(--bg);
-      color: var(--ink);
-      font-family: var(--sans);
-      line-height: 1.5;
-      -webkit-font-smoothing: antialiased;
-    }
+    @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } * { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; } }
+    body { margin: 0; background: var(--bg); color: var(--ink); font-family: var(--sans); line-height: 1.5; -webkit-font-smoothing: antialiased; }
     a { color: inherit; text-decoration: none; }
     .wrap { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
 
+    /* Visually-hidden for screen readers */
+    .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
+
     /* Top Nav */
-    .topbar {
-      border-bottom: 1px solid var(--border);
-      background: rgba(247, 245, 240, 0.94);
-      backdrop-filter: blur(6px);
-      position: sticky;
-      top: 0;
-      z-index: 20;
-    }
-    .topbar-inner {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      height: 60px;
-      gap: 16px;
-    }
-    .brand {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      font-weight: 700;
-      font-size: 1.05rem;
-      letter-spacing: -0.02em;
-    }
-    .brand-badge {
-      font-family: var(--mono);
-      font-size: 0.72rem;
-      font-weight: 600;
-      padding: 2px 8px;
-      border: 1px solid var(--border);
-      background: var(--surface);
-      color: var(--accent);
-    }
-    .nav-links {
-      display: flex;
-      align-items: center;
-      gap: 18px;
-      font-family: var(--mono);
-      font-size: 0.8rem;
-    }
-    .nav-links a:hover { color: var(--accent); }
-    .btn-outline {
-      border: 1px solid var(--ink);
-      padding: 6px 12px;
-      background: var(--surface);
-      font-weight: 500;
-    }
-    .btn-outline:hover { background: var(--ink); color: var(--surface); }
+    .topbar { border-bottom: 1px solid var(--border); background: rgba(247,245,240,0.94); backdrop-filter: blur(6px); position: sticky; top: 0; z-index: 20; }
+    .topbar-inner { display: flex; align-items: center; justify-content: space-between; min-height: 60px; padding: 8px 0; gap: 12px; flex-wrap: wrap; }
+    .brand { display: flex; align-items: center; gap: 10px; font-weight: 700; font-size: 1rem; letter-spacing: -0.02em; flex-shrink: 0; }
+    .brand-badge { font-family: var(--mono); font-size: 0.72rem; font-weight: 600; padding: 2px 8px; border: 1px solid var(--border); background: var(--surface); color: var(--accent); white-space: nowrap; }
+    .nav-links { display: flex; align-items: center; gap: 14px; font-family: var(--mono); font-size: 0.78rem; flex-wrap: wrap; }
+    .nav-links a { padding: 4px 2px; }
+    .nav-links a:hover, .nav-links a:focus { color: var(--accent); outline: none; text-decoration: underline; }
+    .btn-outline { border: 1px solid var(--ink); padding: 6px 12px; background: var(--surface); font-weight: 500; display: inline-block; }
+    .btn-outline:hover, .btn-outline:focus { background: var(--ink); color: var(--surface); outline: none; }
 
     /* 2-Column Hero */
-    .hero {
-      padding: 44px 0 38px;
-      border-bottom: 1px solid var(--border);
-      display: grid;
-      grid-template-columns: 1.05fr 1fr;
-      gap: 32px;
-      align-items: end;
-    }
-    .eyebrow {
-      font-family: var(--mono);
-      font-size: 0.76rem;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      color: var(--muted);
-      margin-bottom: 10px;
-    }
-    h1 {
-      margin: 0 0 12px;
-      font-size: clamp(2rem, 3.8vw, 2.95rem);
-      line-height: 1.06;
-      letter-spacing: -0.03em;
-    }
-    .hero-sub {
-      margin: 0 0 20px;
-      color: var(--muted);
-      font-size: 1rem;
-      max-width: 54ch;
-    }
-    .stats-strip {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 20px;
-      font-family: var(--mono);
-      font-size: 0.78rem;
-      color: var(--muted);
-    }
+    .hero { padding: 40px 0 36px; border-bottom: 1px solid var(--border); display: grid; grid-template-columns: 1.05fr 1fr; gap: 32px; align-items: end; }
+    .eyebrow { font-family: var(--mono); font-size: 0.75rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--muted); margin-bottom: 10px; }
+    h1 { margin: 0 0 12px; font-size: clamp(1.75rem, 3.5vw, 2.8rem); line-height: 1.08; letter-spacing: -0.03em; }
+    .hero-sub { margin: 0 0 20px; color: var(--muted); font-size: 0.98rem; max-width: 54ch; }
+    .stats-strip { display: flex; flex-wrap: wrap; gap: 20px; font-family: var(--mono); font-size: 0.78rem; color: var(--muted); }
     .stats-strip strong { color: var(--ink); font-size: 0.95rem; }
 
-    /* Agent Switcher + Terminal Bar */
-    .install-panel {
-      background: var(--surface);
-      border: 1px solid var(--ink);
-      box-shadow: 4px 4px 0 var(--ink);
-    }
-    .agent-tabs {
-      display: flex;
-      flex-wrap: wrap;
-      border-bottom: 1px solid var(--border);
-      background: var(--surface-alt);
-    }
-    .agent-tab {
-      appearance: none;
-      border: 0;
-      border-right: 1px solid var(--border);
-      background: transparent;
-      padding: 9px 13px;
-      font-family: var(--mono);
-      font-size: 0.78rem;
-      font-weight: 500;
-      color: var(--ink);
-      cursor: pointer;
-    }
+    /* Install Panel */
+    .install-panel { background: var(--surface); border: 1px solid var(--ink); box-shadow: 4px 4px 0 var(--ink); }
+    .scope-row { display: flex; align-items: center; gap: 8px; padding: 8px 12px; background: var(--bg); border-bottom: 1px solid var(--border); font-family: var(--mono); font-size: 0.75rem; color: var(--muted); flex-wrap: wrap; }
+    .scope-label { font-weight: 600; color: var(--ink); }
+    .scope-btn { appearance: none; border: 1px solid var(--border); background: var(--surface); padding: 3px 10px; font-family: var(--mono); font-size: 0.74rem; cursor: pointer; color: var(--ink); }
+    .scope-btn[aria-pressed="true"] { background: var(--ink); color: var(--surface); border-color: var(--ink); }
+    .agent-tabs { display: flex; flex-wrap: wrap; border-bottom: 1px solid var(--border); background: var(--surface-alt); }
+    .agent-tab { appearance: none; border: 0; border-right: 1px solid var(--border); background: transparent; padding: 9px 12px; font-family: var(--mono); font-size: 0.76rem; font-weight: 500; color: var(--ink); cursor: pointer; white-space: nowrap; }
     .agent-tab:hover { background: var(--surface); }
-    .agent-tab[aria-selected="true"] {
-      background: var(--accent);
-      color: #fff;
-      font-weight: 600;
-    }
-    .cmd-row {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 12px;
-      padding: 14px 16px;
-      font-family: var(--mono);
-      font-size: 0.84rem;
-      overflow-x: auto;
-    }
-    .cmd-code { white-space: nowrap; }
-    .cmd-prompt { color: var(--accent); user-select: none; margin-right: 8px; }
-    .copy-btn {
-      appearance: none;
-      border: 1px solid var(--accent);
-      background: var(--accent);
-      color: #fff;
-      font-family: var(--mono);
-      font-size: 0.76rem;
-      font-weight: 600;
-      padding: 7px 14px;
-      cursor: pointer;
-      white-space: nowrap;
-      flex-shrink: 0;
-    }
+    .agent-tab[aria-selected="true"] { background: var(--accent); color: #fff; font-weight: 600; }
+    .agent-tab:focus-visible { outline: 2px solid var(--accent); outline-offset: -2px; }
+    .cmd-row { display: flex; align-items: center; gap: 10px; padding: 12px 14px; font-family: var(--mono); font-size: 0.82rem; overflow-x: auto; }
+    .cmd-code { white-space: nowrap; flex: 1; min-width: 0; overflow: hidden; text-overflow: ellipsis; }
+    .cmd-prompt { color: var(--accent); user-select: none; margin-right: 6px; }
+    .cmd-explain { padding: 0 14px 10px; font-family: var(--mono); font-size: 0.72rem; color: var(--muted); }
+    .copy-btn { appearance: none; border: 1px solid var(--accent); background: var(--accent); color: #fff; font-family: var(--mono); font-size: 0.74rem; font-weight: 600; padding: 7px 12px; cursor: pointer; white-space: nowrap; flex-shrink: 0; min-width: 110px; text-align: center; }
     .copy-btn:hover { background: var(--accent-hover); }
+    .copy-btn:focus-visible { outline: 2px solid var(--ink); outline-offset: 2px; }
     .copy-btn.copied { background: var(--ok); border-color: var(--ok); }
+    .copy-btn.err { background: var(--err); border-color: var(--err); }
 
     /* Filter Toolbar */
-    .toolbar {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      justify-content: space-between;
-      gap: 14px;
-      padding: 24px 0 18px;
-    }
-    .cat-pills { display: flex; flex-wrap: wrap; gap: 8px; }
-    .cat-pill {
-      appearance: none;
-      border: 1px solid var(--border);
-      background: var(--surface);
-      padding: 7px 12px;
-      font-family: var(--mono);
-      font-size: 0.78rem;
-      cursor: pointer;
-      color: var(--ink);
-    }
-    .cat-pill[aria-pressed="true"] {
-      border-color: var(--ink);
-      background: var(--ink);
-      color: var(--surface);
-    }
-    .search-wrap {
-      position: relative;
-      display: flex;
-      align-items: center;
-    }
-    .search-box {
-      border: 1px solid var(--border);
-      background: var(--surface);
-      padding: 8px 38px 8px 12px;
-      font-family: var(--mono);
-      font-size: 0.84rem;
-      min-width: 260px;
-      color: var(--ink);
-    }
+    .toolbar { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 12px; padding: 22px 0 16px; }
+    .toolbar-left { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; }
+    .cat-pills { display: flex; flex-wrap: wrap; gap: 7px; }
+    .cat-pill { appearance: none; border: 1px solid var(--border); background: var(--surface); padding: 6px 11px; font-family: var(--mono); font-size: 0.76rem; cursor: pointer; color: var(--ink); white-space: nowrap; }
+    .cat-pill[aria-pressed="true"] { border-color: var(--ink); background: var(--ink); color: var(--surface); }
+    .cat-pill:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+    .search-wrap { position: relative; display: flex; align-items: center; }
+    .search-box { border: 1px solid var(--border); background: var(--surface); padding: 8px 70px 8px 12px; font-family: var(--mono); font-size: 0.82rem; width: 100%; min-width: 220px; color: var(--ink); }
     .search-box:focus { outline: 2px solid var(--accent); outline-offset: -1px; }
-    .kbd-hint {
-      position: absolute;
-      right: 10px;
-      font-family: var(--mono);
-      font-size: 0.7rem;
-      color: var(--muted);
-      border: 1px solid var(--border);
-      padding: 1px 5px;
-      pointer-events: none;
-    }
+    .search-clear { position: absolute; right: 36px; appearance: none; border: 0; background: none; font-family: var(--mono); font-size: 0.8rem; color: var(--muted); cursor: pointer; display: none; padding: 4px; }
+    .search-clear.visible { display: block; }
+    .kbd-hint { position: absolute; right: 8px; font-family: var(--mono); font-size: 0.68rem; color: var(--muted); border: 1px solid var(--border); padding: 1px 4px; pointer-events: none; }
+    .results-count { font-family: var(--mono); font-size: 0.75rem; color: var(--muted); white-space: nowrap; }
 
     /* Category Sections */
-    .cat-section { margin-bottom: 34px; }
-    .cat-header {
-      display: flex;
-      align-items: baseline;
-      justify-content: space-between;
-      border-bottom: 2px solid var(--ink);
-      padding-bottom: 8px;
-      margin-bottom: 0;
-    }
-    .cat-title {
-      font-family: var(--mono);
-      font-size: 0.86rem;
-      font-weight: 600;
-      letter-spacing: 0.04em;
-      text-transform: uppercase;
-      margin: 0;
-    }
-    .cat-count {
-      font-family: var(--mono);
-      font-size: 0.78rem;
-      color: var(--muted);
-    }
+    .cat-section { margin-bottom: 32px; }
+    .cat-header { display: flex; align-items: baseline; justify-content: space-between; border-bottom: 2px solid var(--ink); padding-bottom: 7px; margin-bottom: 0; }
+    .cat-title { font-family: var(--mono); font-size: 0.84rem; font-weight: 600; letter-spacing: 0.04em; text-transform: uppercase; margin: 0; }
+    .cat-count { font-family: var(--mono); font-size: 0.76rem; color: var(--muted); }
 
     /* Skill Rows */
-    .skill-table {
-      width: 100%;
-      background: var(--surface);
-      border-left: 1px solid var(--border);
-      border-right: 1px solid var(--border);
-    }
-    .skill-row {
-      border-bottom: 1px solid var(--border);
-      display: grid;
-      grid-template-columns: 44px 230px 1fr auto;
-      align-items: center;
-      gap: 14px;
-      padding: 13px 14px;
-    }
+    .skill-table { width: 100%; background: var(--surface); border-left: 1px solid var(--border); border-right: 1px solid var(--border); }
+    .skill-row { border-bottom: 1px solid var(--border); display: grid; grid-template-columns: 40px minmax(180px,220px) 1fr auto; align-items: center; gap: 12px; padding: 12px 14px; }
     .skill-row:hover { background: #FAF9F6; }
-    .skill-id {
-      font-family: var(--mono);
-      font-size: 0.78rem;
-      color: var(--muted);
-    }
-    .skill-name {
-      font-family: var(--mono);
-      font-size: 0.9rem;
-      font-weight: 600;
-      color: var(--ink);
-    }
-    .skill-name a:hover { color: var(--accent); text-decoration: underline; }
-    .skill-desc {
-      font-size: 0.92rem;
-      color: var(--muted);
-    }
-    .skill-actions {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-    .install-mini {
-      appearance: none;
-      border: 1px solid var(--accent);
-      background: var(--accent);
-      color: #fff;
-      font-family: var(--mono);
-      font-size: 0.74rem;
-      font-weight: 600;
-      padding: 6px 10px;
-      cursor: pointer;
-      white-space: nowrap;
-    }
+    .skill-id { font-family: var(--mono); font-size: 0.76rem; color: var(--muted); }
+    .skill-name { font-family: var(--mono); font-size: 0.88rem; font-weight: 600; color: var(--ink); overflow: hidden; text-overflow: ellipsis; }
+    .skill-name a:hover, .skill-name a:focus { color: var(--accent); text-decoration: underline; outline: none; }
+    .skill-type-badge { display: inline-block; font-family: var(--mono); font-size: 0.62rem; font-weight: 600; padding: 1px 5px; border: 1px solid var(--border); color: var(--muted); margin-left: 5px; vertical-align: middle; white-space: nowrap; }
+    .skill-type-badge.mcp-badge { border-color: #7C3AED; color: #7C3AED; }
+    .skill-desc { font-size: 0.9rem; color: var(--muted); }
+    .skill-actions { display: flex; align-items: center; gap: 7px; flex-wrap: nowrap; }
+    .install-mini { appearance: none; border: 1px solid var(--accent); background: var(--accent); color: #fff; font-family: var(--mono); font-size: 0.72rem; font-weight: 600; padding: 6px 9px; cursor: pointer; white-space: nowrap; min-width: 120px; text-align: center; }
     .install-mini:hover { background: var(--accent-hover); }
+    .install-mini:focus-visible { outline: 2px solid var(--ink); outline-offset: 2px; }
     .install-mini.copied { background: var(--ok); border-color: var(--ok); }
-    .preview-btn, .src-link {
-      appearance: none;
-      font-family: var(--mono);
-      font-size: 0.74rem;
-      padding: 5px 9px;
-      border: 1px solid var(--border);
-      background: var(--surface);
-      color: var(--ink);
-      cursor: pointer;
-    }
-    .preview-btn:hover, .src-link:hover { border-color: var(--ink); }
+    .install-mini.err { background: var(--err); border-color: var(--err); }
+    .view-config-btn { appearance: none; border: 1px solid #7C3AED; background: #7C3AED; color: #fff; font-family: var(--mono); font-size: 0.72rem; font-weight: 600; padding: 6px 9px; cursor: pointer; white-space: nowrap; }
+    .view-config-btn:hover { background: #6D28D9; border-color: #6D28D9; }
+    .preview-btn { appearance: none; font-family: var(--mono); font-size: 0.72rem; padding: 5px 8px; border: 1px solid var(--border); background: var(--surface); color: var(--ink); cursor: pointer; white-space: nowrap; }
+    .preview-btn:hover, .preview-btn:focus-visible { border-color: var(--ink); outline: none; }
 
-    .empty-state {
-      display: none;
-      padding: 36px;
-      text-align: center;
-      border: 1px solid var(--border);
-      background: var(--surface);
-      font-family: var(--mono);
-      font-size: 0.9rem;
-      color: var(--muted);
-    }
+    .empty-state { display: none; padding: 36px; text-align: center; border: 1px solid var(--border); background: var(--surface); font-family: var(--mono); font-size: 0.88rem; color: var(--muted); }
 
-    /* Spec Preview Modal */
-    dialog#spec-modal {
-      border: 1px solid var(--ink);
-      box-shadow: 6px 6px 0 var(--ink);
-      background: var(--surface);
-      color: var(--ink);
-      max-width: 780px;
-      width: calc(100% - 32px);
-      padding: 0;
-    }
-    dialog::backdrop { background: rgba(20, 20, 19, 0.45); }
-    .modal-head {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 12px 16px;
-      border-bottom: 1px solid var(--border);
-      background: var(--surface-alt);
-      font-family: var(--mono);
-      font-size: 0.85rem;
-      font-weight: 600;
-    }
-    .modal-close {
-      appearance: none;
-      border: 1px solid var(--ink);
-      background: var(--surface);
-      padding: 4px 10px;
-      font-family: var(--mono);
-      font-size: 0.75rem;
-      cursor: pointer;
-    }
-    .modal-body {
-      padding: 16px;
-      max-height: 68vh;
-      overflow: auto;
-      font-family: var(--mono);
-      font-size: 0.8rem;
-      line-height: 1.55;
-      white-space: pre-wrap;
-      margin: 0;
-    }
+    /* Modal */
+    dialog#spec-modal { border: 1px solid var(--ink); box-shadow: 6px 6px 0 var(--ink); background: var(--surface); color: var(--ink); max-width: 800px; width: calc(100% - 24px); max-height: 90vh; padding: 0; display: flex; flex-direction: column; }
+    dialog::backdrop { background: rgba(20,20,19,0.5); }
+    .modal-head { display: flex; align-items: center; justify-content: space-between; gap: 10px; padding: 11px 14px; border-bottom: 1px solid var(--border); background: var(--surface-alt); flex-shrink: 0; flex-wrap: wrap; }
+    .modal-title-text { font-family: var(--mono); font-size: 0.83rem; font-weight: 600; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+    .modal-actions { display: flex; gap: 8px; flex-shrink: 0; }
+    .modal-btn { appearance: none; border: 1px solid var(--border); background: var(--surface); padding: 4px 10px; font-family: var(--mono); font-size: 0.72rem; cursor: pointer; white-space: nowrap; }
+    .modal-btn:hover { border-color: var(--ink); }
+    .modal-btn.primary { border-color: var(--accent); background: var(--accent); color: #fff; }
+    .modal-btn.primary:hover { background: var(--accent-hover); }
+    .modal-status { padding: 8px 14px; font-family: var(--mono); font-size: 0.75rem; color: var(--muted); border-bottom: 1px solid var(--border); flex-shrink: 0; }
+    .modal-status.error { color: var(--err); }
+    .modal-body { padding: 16px; overflow: auto; font-family: var(--mono); font-size: 0.78rem; line-height: 1.6; white-space: pre-wrap; margin: 0; flex: 1; min-height: 0; }
 
-    footer {
-      border-top: 1px solid var(--border);
-      padding: 28px 0 44px;
-      margin-top: 24px;
-      font-family: var(--mono);
-      font-size: 0.8rem;
-      color: var(--muted);
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      gap: 12px;
-    }
+    /* Live announce for a11y */
+    #live-announce { position: absolute; left: -9999px; }
 
-    @media (max-width: 900px) {
-      .hero { grid-template-columns: 1fr; gap: 22px; }
-    }
-    @media (max-width: 820px) {
-      .skill-row { grid-template-columns: 36px 1fr; gap: 6px 12px; }
+    footer { border-top: 1px solid var(--border); padding: 24px 0 40px; margin-top: 20px; font-family: var(--mono); font-size: 0.78rem; color: var(--muted); display: flex; flex-wrap: wrap; justify-content: space-between; gap: 10px; }
+
+    /* Responsive */
+    @media (max-width: 900px) { .hero { grid-template-columns: 1fr; gap: 24px; } }
+    @media (max-width: 768px) {
+      .skill-row { grid-template-columns: 36px 1fr; row-gap: 4px; }
       .skill-desc { grid-column: 2; }
-      .skill-actions { grid-column: 2; margin-top: 4px; }
+      .skill-actions { grid-column: 2; margin-top: 2px; flex-wrap: wrap; }
+      .install-mini, .view-config-btn { min-width: unset; }
+      .search-box { min-width: 160px; }
+    }
+    @media (max-width: 480px) {
+      .brand-badge { display: none; }
+      .nav-links a:not(.btn-outline) { display: none; }
+      h1 { font-size: 1.6rem; }
+      .cmd-row { flex-direction: column; align-items: stretch; gap: 8px; }
+      .copy-btn { width: 100%; }
     }
   </style>
 </head>
 <body>
+  <div id="live-announce" aria-live="polite" aria-atomic="true"></div>
+
   <header class="topbar">
     <div class="wrap topbar-inner">
-      <a class="brand" href="#top">
+      <a class="brand" href="#top" aria-label="sandeshPatel06/Skills home">
         <span>sandeshPatel06/Skills</span>
-        <span class="brand-badge">18 SKILLS + MCP</span>
+        <span class="brand-badge">18 SKILLS · 1 MCP CONFIG</span>
       </a>
       <nav class="nav-links" aria-label="Primary">
         <a href="#onedev">OneDev</a>
         <a href="#uiux">UI/UX</a>
         <a href="#workflows">Workflows</a>
         <a href="#mcp">MCP</a>
-        <a class="btn-outline" href="https://github.com/sandeshPatel06/Skills" target="_blank" rel="noopener">GitHub ↗</a>
+        <a class="btn-outline" href="https://github.com/sandeshPatel06/Skills" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
       </nav>
     </div>
   </header>
 
   <main id="top" class="wrap">
-    <section class="hero">
+    <section class="hero" aria-label="Introduction">
       <div>
-        <div class="eyebrow">18 AGENT SKILLS // SPEC &amp; INSTALL INDEX</div>
+        <div class="eyebrow">19 RESOURCES // SKILLS &amp; MCP CONFIG INDEX</div>
         <h1>First-party skills for every AI coding agent.</h1>
         <p class="hero-sub">
-          Inspect <code>SKILL.md</code> specs in-browser and copy one-click install commands for OneDev (<code>tod</code>), UI/UX engineering, GitHub CLI, and MCP servers.
+          An AI agent skill is a <code>SKILL.md</code> file that teaches your agent a workflow — reviewing PRs, managing OneDev issues, generating commit messages, and more. Install one skill or the full set.
         </p>
-        <div class="stats-strip">
-          <span><strong>18</strong> verified skills</span>
-          <span><strong>6</strong> agent targets</span>
+        <div class="stats-strip" aria-label="Quick stats">
+          <span><strong>18</strong> skills</span>
+          <span><strong>1</strong> MCP config</span>
+          <span><strong>5</strong> agent targets</span>
           <span><strong>100%</strong> first-party</span>
         </div>
       </div>
 
-      <div class="install-panel" role="region" aria-label="Agent install command generator">
-        <div class="agent-tabs" role="tablist" aria-label="Target AI Agent">
-          <button class="agent-tab" role="tab" aria-selected="true" data-agent="antigravity">Antigravity</button>
-          <button class="agent-tab" role="tab" aria-selected="false" data-agent="claude">Claude Code</button>
-          <button class="agent-tab" role="tab" aria-selected="false" data-agent="codex">Codex</button>
-          <button class="agent-tab" role="tab" aria-selected="false" data-agent="cursor">Cursor</button>
-          <button class="agent-tab" role="tab" aria-selected="false" data-agent="opencode">OpenCode</button>
-          <button class="agent-tab" role="tab" aria-selected="false" data-agent="npx">npx skills</button>
+      <div class="install-panel" role="region" aria-label="Install command generator">
+        <div class="scope-row" role="group" aria-label="Install scope">
+          <span class="scope-label">SCOPE:</span>
+          <button class="scope-btn" aria-pressed="true" data-scope="global" type="button">Global (user)</button>
+          <button class="scope-btn" aria-pressed="false" data-scope="project" type="button">Project</button>
+          <span>— updates the destination path below</span>
+        </div>
+        <div class="agent-tabs" role="tablist" aria-label="Target AI agent">
+          <button class="agent-tab" role="tab" aria-selected="true" data-agent="antigravity" type="button">Antigravity</button>
+          <button class="agent-tab" role="tab" aria-selected="false" data-agent="claude" type="button">Claude Code</button>
+          <button class="agent-tab" role="tab" aria-selected="false" data-agent="codex" type="button">Codex</button>
+          <button class="agent-tab" role="tab" aria-selected="false" data-agent="cursor" type="button">Cursor</button>
+          <button class="agent-tab" role="tab" aria-selected="false" data-agent="opencode" type="button">OpenCode</button>
+          <button class="agent-tab" role="tab" aria-selected="false" data-agent="npx" type="button">npx skills</button>
         </div>
         <div class="cmd-row">
-          <code class="cmd-code" id="global-cmd"><span class="cmd-prompt">$</span>git clone https://github.com/sandeshPatel06/Skills.git ~/.gemini/config/skills</code>
-          <button class="copy-btn" id="copy-global" type="button">COPY CMD</button>
+          <code class="cmd-code" id="global-cmd" aria-label="Install command"><span class="cmd-prompt" aria-hidden="true">$</span>git clone https://github.com/sandeshPatel06/Skills.git ~/.gemini/config/skills</code>
+          <button class="copy-btn" id="copy-global" type="button" aria-label="Copy install command to clipboard">COPY INSTALL CMD</button>
         </div>
+        <div class="cmd-explain" id="cmd-explain">Clones all 18 skills into Antigravity's global skills directory. Run once — no install step needed.</div>
       </div>
     </section>
 
-    <section class="toolbar" aria-label="Filter skills">
-      <div class="cat-pills" role="group" aria-label="Categories">
-        <button class="cat-pill" aria-pressed="true" data-filter="all">ALL (19)</button>
-        <button class="cat-pill" aria-pressed="false" data-filter="onedev">OneDev &amp; tod (13)</button>
-        <button class="cat-pill" aria-pressed="false" data-filter="uiux">UI/UX &amp; Frontend (2)</button>
-        <button class="cat-pill" aria-pressed="false" data-filter="workflows">Engineering &amp; Workflows (2)</button>
-        <button class="cat-pill" aria-pressed="false" data-filter="mcp">Integrations &amp; MCP (2)</button>
+    <section class="toolbar" aria-label="Filter and search">
+      <div class="toolbar-left">
+        <div class="cat-pills" role="group" aria-label="Filter by category">
+          <button class="cat-pill" aria-pressed="true" data-filter="all" type="button">All (19)</button>
+          <button class="cat-pill" aria-pressed="false" data-filter="onedev" type="button">OneDev &amp; tod (13)</button>
+          <button class="cat-pill" aria-pressed="false" data-filter="uiux" type="button">UI/UX (2)</button>
+          <button class="cat-pill" aria-pressed="false" data-filter="workflows" type="button">Workflows (2)</button>
+          <button class="cat-pill" aria-pressed="false" data-filter="mcp" type="button">MCP (2)</button>
+        </div>
+        <span class="results-count" id="results-count" aria-live="polite" aria-atomic="true">19 resources</span>
       </div>
       <div class="search-wrap">
-        <input class="search-box" id="search-input" type="search" placeholder="Filter skills (e.g. tod, ui, mcp)..." aria-label="Filter skills">
-        <span class="kbd-hint">/</span>
+        <label class="sr-only" for="search-input">Search skills</label>
+        <input class="search-box" id="search-input" type="search" placeholder="Search skills (e.g. tod, ui, mcp)..." autocomplete="off">
+        <button class="search-clear" id="search-clear" type="button" aria-label="Clear search">✕</button>
+        <span class="kbd-hint" aria-hidden="true">/</span>
       </div>
     </section>
 
-    <div id="catalog">
+    <div id="catalog" role="list" aria-label="Skills catalog">
       <!-- 01 ONEDEV -->
-      <section class="cat-section" id="onedev" data-cat="onedev">
+      <section class="cat-section" id="onedev" data-cat="onedev" role="listitem">
         <div class="cat-header">
           <h2 class="cat-title">01 // OneDev &amp; tod CLI</h2>
           <span class="cat-count">13 SKILLS</span>
         </div>
         <div class="skill-table">
-          <div class="skill-row" data-skill="using-tod" data-cat="onedev">
-            <span class="skill-id">01</span>
-            <span class="skill-name"><a href="https://github.com/sandeshPatel06/Skills/tree/main/using-tod" target="_blank" rel="noopener">using-tod</a></span>
+          <div class="skill-row" data-skill="using-tod" data-cat="onedev" data-keywords="onedev tod cli issues builds">
+            <span class="skill-id" aria-hidden="true">01</span>
+            <span class="skill-name"><a href="https://github.com/sandeshPatel06/Skills/tree/main/using-tod" target="_blank" rel="noopener noreferrer">using-tod</a></span>
             <span class="skill-desc">Drive OneDev issues, pull requests, and builds through the <code>tod</code> CLI.</span>
             <div class="skill-actions">
-              <button class="preview-btn" type="button" data-preview="using-tod/SKILL.md">PREVIEW</button>
-              <button class="install-mini" type="button" data-install="using-tod">[ + INSTALL ]</button>
+              <button class="preview-btn" type="button" data-preview="using-tod/SKILL.md" aria-label="Preview using-tod skill">PREVIEW</button>
+              <button class="install-mini" type="button" data-install="using-tod" aria-label="Copy install command for using-tod">COPY INSTALL CMD</button>
             </div>
           </div>
-          <div class="skill-row" data-skill="work-on-issue" data-cat="onedev">
-            <span class="skill-id">02</span>
-            <span class="skill-name"><a href="https://github.com/sandeshPatel06/Skills/tree/main/work-on-issue" target="_blank" rel="noopener">work-on-issue</a></span>
+          <div class="skill-row" data-skill="work-on-issue" data-cat="onedev" data-keywords="onedev tod issue branch">
+            <span class="skill-id" aria-hidden="true">02</span>
+            <span class="skill-name"><a href="https://github.com/sandeshPatel06/Skills/tree/main/work-on-issue" target="_blank" rel="noopener noreferrer">work-on-issue</a></span>
             <span class="skill-desc">Create/checkout an issue branch and read issue details via <code>tod</code>.</span>
             <div class="skill-actions">
-              <button class="preview-btn" type="button" data-preview="work-on-issue/SKILL.md">PREVIEW</button>
-              <button class="install-mini" type="button" data-install="work-on-issue">[ + INSTALL ]</button>
+              <button class="preview-btn" type="button" data-preview="work-on-issue/SKILL.md" aria-label="Preview work-on-issue skill">PREVIEW</button>
+              <button class="install-mini" type="button" data-install="work-on-issue" aria-label="Copy install command for work-on-issue">COPY INSTALL CMD</button>
             </div>
           </div>
-          <div class="skill-row" data-skill="work-on-pull-request" data-cat="onedev">
-            <span class="skill-id">03</span>
-            <span class="skill-name"><a href="https://github.com/sandeshPatel06/Skills/tree/main/work-on-pull-request" target="_blank" rel="noopener">work-on-pull-request</a></span>
+          <div class="skill-row" data-skill="work-on-pull-request" data-cat="onedev" data-keywords="onedev tod pull request merge">
+            <span class="skill-id" aria-hidden="true">03</span>
+            <span class="skill-name"><a href="https://github.com/sandeshPatel06/Skills/tree/main/work-on-pull-request" target="_blank" rel="noopener noreferrer">work-on-pull-request</a></span>
             <span class="skill-desc">Review, merge, resolve conflicts, or continue work on a OneDev pull request.</span>
             <div class="skill-actions">
-              <button class="preview-btn" type="button" data-preview="work-on-pull-request/SKILL.md">PREVIEW</button>
-              <button class="install-mini" type="button" data-install="work-on-pull-request">[ + INSTALL ]</button>
+              <button class="preview-btn" type="button" data-preview="work-on-pull-request/SKILL.md" aria-label="Preview work-on-pull-request skill">PREVIEW</button>
+              <button class="install-mini" type="button" data-install="work-on-pull-request" aria-label="Copy install command for work-on-pull-request">COPY INSTALL CMD</button>
             </div>
           </div>
-          <div class="skill-row" data-skill="submit-issue-work" data-cat="onedev">
-            <span class="skill-id">04</span>
-            <span class="skill-name"><a href="https://github.com/sandeshPatel06/Skills/tree/main/submit-issue-work" target="_blank" rel="noopener">submit-issue-work</a></span>
+          <div class="skill-row" data-skill="submit-issue-work" data-cat="onedev" data-keywords="onedev tod submit issue">
+            <span class="skill-id" aria-hidden="true">04</span>
+            <span class="skill-name"><a href="https://github.com/sandeshPatel06/Skills/tree/main/submit-issue-work" target="_blank" rel="noopener noreferrer">submit-issue-work</a></span>
             <span class="skill-desc">Submit completed work for a OneDev issue.</span>
             <div class="skill-actions">
-              <button class="preview-btn" type="button" data-preview="submit-issue-work/SKILL.md">PREVIEW</button>
-              <button class="install-mini" type="button" data-install="submit-issue-work">[ + INSTALL ]</button>
+              <button class="preview-btn" type="button" data-preview="submit-issue-work/SKILL.md" aria-label="Preview submit-issue-work skill">PREVIEW</button>
+              <button class="install-mini" type="button" data-install="submit-issue-work" aria-label="Copy install command for submit-issue-work">COPY INSTALL CMD</button>
             </div>
           </div>
-          <div class="skill-row" data-skill="submit-pull-request-work" data-cat="onedev">
-            <span class="skill-id">05</span>
-            <span class="skill-name"><a href="https://github.com/sandeshPatel06/Skills/tree/main/submit-pull-request-work" target="_blank" rel="noopener">submit-pull-request-work</a></span>
+          <div class="skill-row" data-skill="submit-pull-request-work" data-cat="onedev" data-keywords="onedev tod submit pull request">
+            <span class="skill-id" aria-hidden="true">05</span>
+            <span class="skill-name"><a href="https://github.com/sandeshPatel06/Skills/tree/main/submit-pull-request-work" target="_blank" rel="noopener noreferrer">submit-pull-request-work</a></span>
             <span class="skill-desc">Submit completed work for an existing OneDev pull request.</span>
             <div class="skill-actions">
-              <button class="preview-btn" type="button" data-preview="submit-pull-request-work/SKILL.md">PREVIEW</button>
-              <button class="install-mini" type="button" data-install="submit-pull-request-work">[ + INSTALL ]</button>
+              <button class="preview-btn" type="button" data-preview="submit-pull-request-work/SKILL.md" aria-label="Preview submit-pull-request-work skill">PREVIEW</button>
+              <button class="install-mini" type="button" data-install="submit-pull-request-work" aria-label="Copy install command for submit-pull-request-work">COPY INSTALL CMD</button>
             </div>
           </div>
-          <div class="skill-row" data-skill="submit-work" data-cat="onedev">
-            <span class="skill-id">06</span>
-            <span class="skill-name"><a href="https://github.com/sandeshPatel06/Skills/tree/main/submit-work" target="_blank" rel="noopener">submit-work</a></span>
+          <div class="skill-row" data-skill="submit-work" data-cat="onedev" data-keywords="onedev tod commit push pull request">
+            <span class="skill-id" aria-hidden="true">06</span>
+            <span class="skill-name"><a href="https://github.com/sandeshPatel06/Skills/tree/main/submit-work" target="_blank" rel="noopener noreferrer">submit-work</a></span>
             <span class="skill-desc">Commit, push, and open a OneDev pull request for an issue.</span>
             <div class="skill-actions">
-              <button class="preview-btn" type="button" data-preview="submit-work/SKILL.md">PREVIEW</button>
-              <button class="install-mini" type="button" data-install="submit-work">[ + INSTALL ]</button>
+              <button class="preview-btn" type="button" data-preview="submit-work/SKILL.md" aria-label="Preview submit-work skill">PREVIEW</button>
+              <button class="install-mini" type="button" data-install="submit-work" aria-label="Copy install command for submit-work">COPY INSTALL CMD</button>
             </div>
           </div>
-          <div class="skill-row" data-skill="review-pull-request" data-cat="onedev">
-            <span class="skill-id">07</span>
-            <span class="skill-name"><a href="https://github.com/sandeshPatel06/Skills/tree/main/review-pull-request" target="_blank" rel="noopener">review-pull-request</a></span>
+          <div class="skill-row" data-skill="review-pull-request" data-cat="onedev" data-keywords="onedev tod review code pull request">
+            <span class="skill-id" aria-hidden="true">07</span>
+            <span class="skill-name"><a href="https://github.com/sandeshPatel06/Skills/tree/main/review-pull-request" target="_blank" rel="noopener noreferrer">review-pull-request</a></span>
             <span class="skill-desc">Perform a structured code review of a OneDev pull request via <code>tod</code>.</span>
             <div class="skill-actions">
-              <button class="preview-btn" type="button" data-preview="review-pull-request/SKILL.md">PREVIEW</button>
-              <button class="install-mini" type="button" data-install="review-pull-request">[ + INSTALL ]</button>
+              <button class="preview-btn" type="button" data-preview="review-pull-request/SKILL.md" aria-label="Preview review-pull-request skill">PREVIEW</button>
+              <button class="install-mini" type="button" data-install="review-pull-request" aria-label="Copy install command for review-pull-request">COPY INSTALL CMD</button>
             </div>
           </div>
-          <div class="skill-row" data-skill="issue-template" data-cat="onedev">
-            <span class="skill-id">08</span>
-            <span class="skill-name"><a href="https://github.com/sandeshPatel06/Skills/tree/main/issue-template" target="_blank" rel="noopener">issue-template</a></span>
+          <div class="skill-row" data-skill="issue-template" data-cat="onedev" data-keywords="onedev tod issue template">
+            <span class="skill-id" aria-hidden="true">08</span>
+            <span class="skill-name"><a href="https://github.com/sandeshPatel06/Skills/tree/main/issue-template" target="_blank" rel="noopener noreferrer">issue-template</a></span>
             <span class="skill-desc">Standard issue template format for creating OneDev issues (<code>@issue</code>).</span>
             <div class="skill-actions">
-              <button class="preview-btn" type="button" data-preview="issue-template/SKILL.md">PREVIEW</button>
-              <button class="install-mini" type="button" data-install="issue-template">[ + INSTALL ]</button>
+              <button class="preview-btn" type="button" data-preview="issue-template/SKILL.md" aria-label="Preview issue-template skill">PREVIEW</button>
+              <button class="install-mini" type="button" data-install="issue-template" aria-label="Copy install command for issue-template">COPY INSTALL CMD</button>
             </div>
           </div>
-          <div class="skill-row" data-skill="generate-commit-message" data-cat="onedev">
-            <span class="skill-id">09</span>
-            <span class="skill-name"><a href="https://github.com/sandeshPatel06/Skills/tree/main/generate-commit-message" target="_blank" rel="noopener">generate-commit-message</a></span>
+          <div class="skill-row" data-skill="generate-commit-message" data-cat="onedev" data-keywords="onedev tod commit message git">
+            <span class="skill-id" aria-hidden="true">09</span>
+            <span class="skill-name"><a href="https://github.com/sandeshPatel06/Skills/tree/main/generate-commit-message" target="_blank" rel="noopener noreferrer">generate-commit-message</a></span>
             <span class="skill-desc">Compose commit messages conforming to <code>tod get-commit-message-requirement</code>.</span>
             <div class="skill-actions">
-              <button class="preview-btn" type="button" data-preview="generate-commit-message/SKILL.md">PREVIEW</button>
-              <button class="install-mini" type="button" data-install="generate-commit-message">[ + INSTALL ]</button>
+              <button class="preview-btn" type="button" data-preview="generate-commit-message/SKILL.md" aria-label="Preview generate-commit-message skill">PREVIEW</button>
+              <button class="install-mini" type="button" data-install="generate-commit-message" aria-label="Copy install command for generate-commit-message">COPY INSTALL CMD</button>
             </div>
           </div>
-          <div class="skill-row" data-skill="standup-report" data-cat="onedev">
-            <span class="skill-id">10</span>
-            <span class="skill-name"><a href="https://github.com/sandeshPatel06/Skills/tree/main/standup-report" target="_blank" rel="noopener">standup-report</a></span>
+          <div class="skill-row" data-skill="standup-report" data-cat="onedev" data-keywords="onedev tod standup report daily">
+            <span class="skill-id" aria-hidden="true">10</span>
+            <span class="skill-name"><a href="https://github.com/sandeshPatel06/Skills/tree/main/standup-report" target="_blank" rel="noopener noreferrer">standup-report</a></span>
             <span class="skill-desc">Generate a standup report from OneDev PR and issue activity.</span>
             <div class="skill-actions">
-              <button class="preview-btn" type="button" data-preview="standup-report/SKILL.md">PREVIEW</button>
-              <button class="install-mini" type="button" data-install="standup-report">[ + INSTALL ]</button>
+              <button class="preview-btn" type="button" data-preview="standup-report/SKILL.md" aria-label="Preview standup-report skill">PREVIEW</button>
+              <button class="install-mini" type="button" data-install="standup-report" aria-label="Copy install command for standup-report">COPY INSTALL CMD</button>
             </div>
           </div>
-          <div class="skill-row" data-skill="edit-build-spec" data-cat="onedev">
-            <span class="skill-id">11</span>
-            <span class="skill-name"><a href="https://github.com/sandeshPatel06/Skills/tree/main/edit-build-spec" target="_blank" rel="noopener">edit-build-spec</a></span>
+          <div class="skill-row" data-skill="edit-build-spec" data-cat="onedev" data-keywords="onedev tod build spec ci cd yaml">
+            <span class="skill-id" aria-hidden="true">11</span>
+            <span class="skill-name"><a href="https://github.com/sandeshPatel06/Skills/tree/main/edit-build-spec" target="_blank" rel="noopener noreferrer">edit-build-spec</a></span>
             <span class="skill-desc">Create or edit <code>.onedev-buildspec.yml</code> using <code>tod</code> schema validation.</span>
             <div class="skill-actions">
-              <button class="preview-btn" type="button" data-preview="edit-build-spec/SKILL.md">PREVIEW</button>
-              <button class="install-mini" type="button" data-install="edit-build-spec">[ + INSTALL ]</button>
+              <button class="preview-btn" type="button" data-preview="edit-build-spec/SKILL.md" aria-label="Preview edit-build-spec skill">PREVIEW</button>
+              <button class="install-mini" type="button" data-install="edit-build-spec" aria-label="Copy install command for edit-build-spec">COPY INSTALL CMD</button>
             </div>
           </div>
-          <div class="skill-row" data-skill="investigate-build-failure" data-cat="onedev">
-            <span class="skill-id">12</span>
-            <span class="skill-name"><a href="https://github.com/sandeshPatel06/Skills/tree/main/investigate-build-failure" target="_blank" rel="noopener">investigate-build-failure</a></span>
+          <div class="skill-row" data-skill="investigate-build-failure" data-cat="onedev" data-keywords="onedev tod build failure debug">
+            <span class="skill-id" aria-hidden="true">12</span>
+            <span class="skill-name"><a href="https://github.com/sandeshPatel06/Skills/tree/main/investigate-build-failure" target="_blank" rel="noopener noreferrer">investigate-build-failure</a></span>
             <span class="skill-desc">Diagnose failing or suspicious OneDev builds via <code>tod</code>.</span>
             <div class="skill-actions">
-              <button class="preview-btn" type="button" data-preview="investigate-build-failure/SKILL.md">PREVIEW</button>
-              <button class="install-mini" type="button" data-install="investigate-build-failure">[ + INSTALL ]</button>
+              <button class="preview-btn" type="button" data-preview="investigate-build-failure/SKILL.md" aria-label="Preview investigate-build-failure skill">PREVIEW</button>
+              <button class="install-mini" type="button" data-install="investigate-build-failure" aria-label="Copy install command for investigate-build-failure">COPY INSTALL CMD</button>
             </div>
           </div>
-          <div class="skill-row" data-skill="fix-failed-build" data-cat="onedev">
-            <span class="skill-id">13</span>
-            <span class="skill-name"><a href="https://github.com/sandeshPatel06/Skills/tree/main/fix-failed-build" target="_blank" rel="noopener">fix-failed-build</a></span>
+          <div class="skill-row" data-skill="fix-failed-build" data-cat="onedev" data-keywords="onedev tod fix build failure">
+            <span class="skill-id" aria-hidden="true">13</span>
+            <span class="skill-name"><a href="https://github.com/sandeshPatel06/Skills/tree/main/fix-failed-build" target="_blank" rel="noopener noreferrer">fix-failed-build</a></span>
             <span class="skill-desc">Fix a prompt-specified failed OneDev build without issue/PR context.</span>
             <div class="skill-actions">
-              <button class="preview-btn" type="button" data-preview="fix-failed-build/SKILL.md">PREVIEW</button>
-              <button class="install-mini" type="button" data-install="fix-failed-build">[ + INSTALL ]</button>
+              <button class="preview-btn" type="button" data-preview="fix-failed-build/SKILL.md" aria-label="Preview fix-failed-build skill">PREVIEW</button>
+              <button class="install-mini" type="button" data-install="fix-failed-build" aria-label="Copy install command for fix-failed-build">COPY INSTALL CMD</button>
             </div>
           </div>
         </div>
       </section>
 
       <!-- 02 UI/UX -->
-      <section class="cat-section" id="uiux" data-cat="uiux">
+      <section class="cat-section" id="uiux" data-cat="uiux" role="listitem">
         <div class="cat-header">
           <h2 class="cat-title">02 // UI/UX &amp; Frontend</h2>
           <span class="cat-count">2 SKILLS</span>
         </div>
         <div class="skill-table">
-          <div class="skill-row" data-skill="premium-ui-ux-engineer" data-cat="uiux">
-            <span class="skill-id">14</span>
-            <span class="skill-name"><a href="https://github.com/sandeshPatel06/Skills/tree/main/premium-ui-ux-engineer" target="_blank" rel="noopener">premium-ui-ux-engineer</a></span>
+          <div class="skill-row" data-skill="premium-ui-ux-engineer" data-cat="uiux" data-keywords="ui ux design frontend accessible">
+            <span class="skill-id" aria-hidden="true">14</span>
+            <span class="skill-name"><a href="https://github.com/sandeshPatel06/Skills/tree/main/premium-ui-ux-engineer" target="_blank" rel="noopener noreferrer">premium-ui-ux-engineer</a></span>
             <span class="skill-desc">Senior product designer and frontend architect guidelines for accessible UIs.</span>
             <div class="skill-actions">
-              <button class="preview-btn" type="button" data-preview="premium-ui-ux-engineer/SKILL.md">PREVIEW</button>
-              <button class="install-mini" type="button" data-install="premium-ui-ux-engineer">[ + INSTALL ]</button>
+              <button class="preview-btn" type="button" data-preview="premium-ui-ux-engineer/SKILL.md" aria-label="Preview premium-ui-ux-engineer skill">PREVIEW</button>
+              <button class="install-mini" type="button" data-install="premium-ui-ux-engineer" aria-label="Copy install command for premium-ui-ux-engineer">COPY INSTALL CMD</button>
             </div>
           </div>
-          <div class="skill-row" data-skill="anti-slop-optimizer" data-cat="uiux">
-            <span class="skill-id">15</span>
-            <span class="skill-name"><a href="https://github.com/sandeshPatel06/Skills/tree/main/anti-slop-optimizer" target="_blank" rel="noopener">anti-slop-optimizer</a></span>
+          <div class="skill-row" data-skill="anti-slop-optimizer" data-cat="uiux" data-keywords="ui ux design anti slop ai copy optimizer">
+            <span class="skill-id" aria-hidden="true">15</span>
+            <span class="skill-name"><a href="https://github.com/sandeshPatel06/Skills/tree/main/anti-slop-optimizer" target="_blank" rel="noopener noreferrer">anti-slop-optimizer</a></span>
             <span class="skill-desc">Audit and optimize web apps to remove AI-generated design and copy tells.</span>
             <div class="skill-actions">
-              <button class="preview-btn" type="button" data-preview="anti-slop-optimizer/SKILL.md">PREVIEW</button>
-              <button class="install-mini" type="button" data-install="anti-slop-optimizer">[ + INSTALL ]</button>
+              <button class="preview-btn" type="button" data-preview="anti-slop-optimizer/SKILL.md" aria-label="Preview anti-slop-optimizer skill">PREVIEW</button>
+              <button class="install-mini" type="button" data-install="anti-slop-optimizer" aria-label="Copy install command for anti-slop-optimizer">COPY INSTALL CMD</button>
             </div>
           </div>
         </div>
       </section>
 
       <!-- 03 WORKFLOWS -->
-      <section class="cat-section" id="workflows" data-cat="workflows">
+      <section class="cat-section" id="workflows" data-cat="workflows" role="listitem">
         <div class="cat-header">
           <h2 class="cat-title">03 // Engineering &amp; Workflows</h2>
           <span class="cat-count">2 SKILLS</span>
         </div>
         <div class="skill-table">
-          <div class="skill-row" data-skill="work-like-boss" data-cat="workflows">
-            <span class="skill-id">16</span>
-            <span class="skill-name"><a href="https://github.com/sandeshPatel06/Skills/tree/main/work-like-boss" target="_blank" rel="noopener">work-like-boss</a></span>
+          <div class="skill-row" data-skill="work-like-boss" data-cat="workflows" data-keywords="workflow product engineering boss execution">
+            <span class="skill-id" aria-hidden="true">16</span>
+            <span class="skill-name"><a href="https://github.com/sandeshPatel06/Skills/tree/main/work-like-boss" target="_blank" rel="noopener noreferrer">work-like-boss</a></span>
             <span class="skill-desc">High-agency product-minded execution — source of truth first, anti-slop craft, options then lock.</span>
             <div class="skill-actions">
-              <button class="preview-btn" type="button" data-preview="work-like-boss/SKILL.md">PREVIEW</button>
-              <button class="install-mini" type="button" data-install="work-like-boss">[ + INSTALL ]</button>
+              <button class="preview-btn" type="button" data-preview="work-like-boss/SKILL.md" aria-label="Preview work-like-boss skill">PREVIEW</button>
+              <button class="install-mini" type="button" data-install="work-like-boss" aria-label="Copy install command for work-like-boss">COPY INSTALL CMD</button>
             </div>
           </div>
-          <div class="skill-row" data-skill="gh-tasks" data-cat="workflows">
-            <span class="skill-id">17</span>
-            <span class="skill-name"><a href="https://github.com/sandeshPatel06/Skills/tree/main/gh-tasks" target="_blank" rel="noopener">gh-tasks</a></span>
+          <div class="skill-row" data-skill="gh-tasks" data-cat="workflows" data-keywords="github gh cli issues pull requests releases">
+            <span class="skill-id" aria-hidden="true">17</span>
+            <span class="skill-name"><a href="https://github.com/sandeshPatel06/Skills/tree/main/gh-tasks" target="_blank" rel="noopener noreferrer">gh-tasks</a></span>
             <span class="skill-desc">Perform GitHub tasks (repos, issues, PRs, gists, releases) via <code>gh</code> CLI (<code>@gh</code>).</span>
             <div class="skill-actions">
-              <button class="preview-btn" type="button" data-preview="gh-tasks/SKILL.md">PREVIEW</button>
-              <button class="install-mini" type="button" data-install="gh-tasks">[ + INSTALL ]</button>
+              <button class="preview-btn" type="button" data-preview="gh-tasks/SKILL.md" aria-label="Preview gh-tasks skill">PREVIEW</button>
+              <button class="install-mini" type="button" data-install="gh-tasks" aria-label="Copy install command for gh-tasks">COPY INSTALL CMD</button>
             </div>
           </div>
         </div>
       </section>
 
       <!-- 04 MCP -->
-      <section class="cat-section" id="mcp" data-cat="mcp">
+      <section class="cat-section" id="mcp" data-cat="mcp" role="listitem">
         <div class="cat-header">
-          <h2 class="cat-title">04 // Integrations &amp; MCP Configs</h2>
-          <span class="cat-count">2 ITEMS</span>
+          <h2 class="cat-title">04 // MCP Integrations</h2>
+          <span class="cat-count">1 SKILL · 1 CONFIG</span>
         </div>
         <div class="skill-table">
-          <div class="skill-row" data-skill="zoho-cliq-mcp" data-cat="mcp">
-            <span class="skill-id">18</span>
-            <span class="skill-name"><a href="https://github.com/sandeshPatel06/Skills/tree/main/zoho-cliq-mcp" target="_blank" rel="noopener">zoho-cliq-mcp</a></span>
-            <span class="skill-desc">Interact with Zoho Cliq using the Zoho MCP server (<code>@zoho</code>).</span>
+          <div class="skill-row" data-skill="zoho-cliq-mcp" data-cat="mcp" data-keywords="zoho cliq mcp messaging integration">
+            <span class="skill-id" aria-hidden="true">18</span>
+            <span class="skill-name"><a href="https://github.com/sandeshPatel06/Skills/tree/main/zoho-cliq-mcp" target="_blank" rel="noopener noreferrer">zoho-cliq-mcp</a></span>
+            <span class="skill-desc">Interact with Zoho Cliq using the Zoho MCP server (<code>@zoho</code>). Requires your own Zoho MCP endpoint URL.</span>
             <div class="skill-actions">
-              <button class="preview-btn" type="button" data-preview="zoho-cliq-mcp/SKILL.md">PREVIEW</button>
-              <button class="install-mini" type="button" data-install="zoho-cliq-mcp">[ + INSTALL ]</button>
+              <button class="preview-btn" type="button" data-preview="zoho-cliq-mcp/SKILL.md" aria-label="Preview zoho-cliq-mcp skill">PREVIEW</button>
+              <button class="install-mini" type="button" data-install="zoho-cliq-mcp" aria-label="Copy install command for zoho-cliq-mcp">COPY INSTALL CMD</button>
             </div>
           </div>
-          <div class="skill-row" data-skill="mcp-configs" data-cat="mcp">
-            <span class="skill-id">19</span>
-            <span class="skill-name"><a href="https://github.com/sandeshPatel06/Skills/tree/main/mcp-configs" target="_blank" rel="noopener">mcp-configs</a></span>
-            <span class="skill-desc">Complete MCP server configuration examples (<code>complete-mcp-config.json</code>).</span>
+          <div class="skill-row" data-skill="mcp-configs" data-cat="mcp" data-type="config" data-keywords="mcp config server configuration template">
+            <span class="skill-id" aria-hidden="true">19</span>
+            <span class="skill-name">
+              <a href="https://github.com/sandeshPatel06/Skills/tree/main/mcp-configs" target="_blank" rel="noopener noreferrer">mcp-configs</a>
+              <span class="skill-type-badge mcp-badge">MCP CONFIG</span>
+            </span>
+            <span class="skill-desc">Reference MCP server configuration template. All values are placeholders — replace with your own paths and credentials before use.</span>
             <div class="skill-actions">
-              <button class="preview-btn" type="button" data-preview="mcp-configs/README.md">PREVIEW</button>
-              <button class="install-mini" type="button" data-install="mcp-configs">[ + INSTALL ]</button>
+              <button class="preview-btn" type="button" data-preview="mcp-configs/README.md" aria-label="View mcp-configs documentation">VIEW DOCS</button>
+              <button class="view-config-btn" type="button" data-preview="mcp-configs/complete-mcp-config.json" aria-label="View complete MCP config template">VIEW CONFIG</button>
             </div>
           </div>
         </div>
       </section>
     </div>
 
-    <div class="empty-state" id="empty-state">No skills match your filter.</div>
+    <div class="empty-state" id="empty-state" role="status">No resources match your search.</div>
 
     <footer>
-      <span>sandeshPatel06/Skills · First-party AI agent skills</span>
-      <span><a href="https://github.com/sandeshPatel06/Skills" target="_blank" rel="noopener">github.com/sandeshPatel06/Skills</a></span>
+      <span>sandeshPatel06/Skills · 18 first-party AI agent skills</span>
+      <span><a href="https://github.com/sandeshPatel06/Skills" target="_blank" rel="noopener noreferrer">github.com/sandeshPatel06/Skills</a></span>
     </footer>
   </main>
 
-  <dialog id="spec-modal" aria-labelledby="modal-title">
+  <dialog id="spec-modal" aria-labelledby="modal-title-text" aria-modal="true">
     <div class="modal-head">
-      <span id="modal-title">SKILL.md</span>
-      <button class="modal-close" id="modal-close" type="button">ESC / CLOSE</button>
+      <span class="modal-title-text" id="modal-title-text">SKILL.md</span>
+      <div class="modal-actions">
+        <button class="modal-btn" id="modal-retry" type="button" style="display:none">Retry</button>
+        <button class="modal-btn primary" id="modal-gh-link" type="button">Open on GitHub</button>
+        <button class="modal-btn" id="modal-close" type="button" aria-label="Close preview">ESC / CLOSE</button>
+      </div>
     </div>
-    <pre class="modal-body" id="modal-body">Loading...</pre>
+    <div class="modal-status" id="modal-status" style="display:none"></div>
+    <pre class="modal-body" id="modal-body" tabindex="0" aria-label="File contents">Select a skill to preview.</pre>
   </dialog>
 
   <script>
-    (function () {
-      const AGENT_PATHS = {
-        antigravity: "~/.gemini/config/skills",
-        claude: "~/.claude/skills",
-        codex: "~/.codex/skills",
-        cursor: ".cursor/skills",
-        opencode: "~/.config/opencode/skills",
-        npx: null
+  (function () {
+    'use strict';
+
+    // ── Agent paths ───────────────────────────────────────────────
+    const PATHS = {
+      antigravity: { global: '~/.gemini/config/skills',    project: '.agents/skills' },
+      claude:      { global: '~/.claude/skills',            project: '.claude/skills' },
+      codex:       { global: '~/.agents/skills',            project: '.agents/skills' },
+      cursor:      { global: '~/.cursor/skills',            project: '.cursor/skills' },
+      opencode:    { global: '~/.config/opencode/skills',   project: '.opencode/skills' },
+      npx:         { global: null,                          project: null }
+    };
+
+    const EXPLAINS = {
+      antigravity: { global: 'Clones all 18 skills into Antigravity\'s global skills directory.', project: 'Clones all 18 skills into this project\'s .agents/skills directory.' },
+      claude:      { global: 'Clones all 18 skills into Claude Code\'s global skills directory.', project: 'Clones into .claude/skills inside your project.' },
+      codex:       { global: 'Clones all 18 skills into Codex\'s global skills directory.', project: 'Clones into .agents/skills inside your project.' },
+      cursor:      { global: 'Clones all 18 skills into Cursor\'s global skills directory.', project: 'Clones into .cursor/skills inside your project.' },
+      opencode:    { global: 'Clones all 18 skills into OpenCode\'s global skills directory.', project: 'Clones into .opencode/skills inside your project.' },
+      npx:         { global: 'Installs all skills via the npx skills CLI.', project: 'Installs all skills via the npx skills CLI.' }
+    };
+
+    let currentAgent = 'antigravity';
+    let currentScope = 'global';
+    let currentFilter = 'all';
+    let activePreviewPath = null;
+
+    const globalCmdEl   = document.getElementById('global-cmd');
+    const copyGlobalBtn = document.getElementById('copy-global');
+    const cmdExplain    = document.getElementById('cmd-explain');
+    const searchInput   = document.getElementById('search-input');
+    const searchClear   = document.getElementById('search-clear');
+    const emptyState    = document.getElementById('empty-state');
+    const resultsCount  = document.getElementById('results-count');
+    const liveAnnounce  = document.getElementById('live-announce');
+    const modal         = document.getElementById('spec-modal');
+    const modalTitleEl  = document.getElementById('modal-title-text');
+    const modalBody     = document.getElementById('modal-body');
+    const modalStatus   = document.getElementById('modal-status');
+    const modalClose    = document.getElementById('modal-close');
+    const modalRetry    = document.getElementById('modal-retry');
+    const modalGhLink   = document.getElementById('modal-gh-link');
+
+    function announce(msg) {
+      liveAnnounce.textContent = '';
+      requestAnimationFrame(() => { liveAnnounce.textContent = msg; });
+    }
+
+    function getGlobalCmd(agent, scope) {
+      if (agent === 'npx') return 'npx skills add sandeshPatel06/Skills';
+      const dest = PATHS[agent][scope];
+      return `git clone https://github.com/sandeshPatel06/Skills.git ${dest}`;
+    }
+
+    function getSkillCmd(skill, agent, scope) {
+      if (agent === 'npx') return `npx skills add sandeshPatel06/Skills --skill ${skill}`;
+      const dest = PATHS[agent][scope];
+      return `npx degit sandeshPatel06/Skills/${skill} ${dest}/${skill}`;
+    }
+
+    function updateGlobalCmd() {
+      const cmd = getGlobalCmd(currentAgent, currentScope);
+      globalCmdEl.innerHTML = `<span class="cmd-prompt" aria-hidden="true">$</span>${escHtml(cmd)}`;
+      cmdExplain.textContent = EXPLAINS[currentAgent][currentScope] + ' Copying this command does not run it — paste it in your terminal to install.';
+    }
+
+    function escHtml(s) {
+      return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+    }
+
+    // ── Clipboard ─────────────────────────────────────────────────
+    function copyText(text, btn, originalLabel) {
+      const doFallback = () => {
+        const ta = document.createElement('textarea');
+        ta.value = text;
+        ta.style.cssText = 'position:fixed;top:-9999px;opacity:0';
+        document.body.appendChild(ta);
+        ta.focus(); ta.select();
+        let ok = false;
+        try { ok = document.execCommand('copy'); } catch(e) {}
+        document.body.removeChild(ta);
+        return ok;
       };
 
-      let currentAgent = "antigravity";
-      let currentFilter = "all";
+      const succeed = () => {
+        btn.textContent = 'COPIED ✓';
+        btn.classList.remove('err'); btn.classList.add('copied');
+        announce('Command copied to clipboard. Paste it in your terminal to install.');
+        setTimeout(() => { btn.textContent = originalLabel; btn.classList.remove('copied'); }, 1600);
+      };
 
-      const globalCmdEl = document.getElementById("global-cmd");
-      const copyGlobalBtn = document.getElementById("copy-global");
-      const searchInput = document.getElementById("search-input");
-      const emptyState = document.getElementById("empty-state");
-      const modal = document.getElementById("spec-modal");
-      const modalTitle = document.getElementById("modal-title");
-      const modalBody = document.getElementById("modal-body");
+      const fail = () => {
+        btn.textContent = 'COPY FAILED';
+        btn.classList.remove('copied'); btn.classList.add('err');
+        announce('Copy failed. Please select and copy the command manually.');
+        setTimeout(() => { btn.textContent = originalLabel; btn.classList.remove('err'); }, 2200);
+      };
 
-      function getGlobalCmd(agent) {
-        if (agent === "npx") return "npx skills add sandeshPatel06/Skills";
-        return `git clone https://github.com/sandeshPatel06/Skills.git ${AGENT_PATHS[agent]}`;
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(text).then(succeed, () => { if (!doFallback()) fail(); else succeed(); });
+      } else {
+        if (!doFallback()) fail(); else succeed();
       }
+    }
 
-      function getSkillCmd(skill, agent) {
-        if (agent === "npx") return `npx skills add sandeshPatel06/Skills --skill ${skill}`;
-        return `npx degit sandeshPatel06/Skills/${skill} ${AGENT_PATHS[agent]}/${skill}`;
-      }
-
-      function updateGlobalCmd() {
-        globalCmdEl.innerHTML = `<span class="cmd-prompt">$</span>${getGlobalCmd(currentAgent)}`;
-      }
-
-      function copyText(text, btn, originalLabel) {
-        navigator.clipboard.writeText(text).then(() => {
-          btn.textContent = "COPIED ✓";
-          btn.classList.add("copied");
-          setTimeout(() => {
-            btn.textContent = originalLabel;
-            btn.classList.remove("copied");
-          }, 1400);
-        });
-      }
-
-      document.querySelectorAll(".agent-tab").forEach((tab) => {
-        tab.addEventListener("click", () => {
-          document.querySelectorAll(".agent-tab").forEach((t) => t.setAttribute("aria-selected", "false"));
-          tab.setAttribute("aria-selected", "true");
-          currentAgent = tab.dataset.agent;
-          updateGlobalCmd();
-        });
+    // ── Agent tabs ────────────────────────────────────────────────
+    document.querySelectorAll('.agent-tab').forEach(tab => {
+      tab.addEventListener('click', () => {
+        document.querySelectorAll('.agent-tab').forEach(t => t.setAttribute('aria-selected', 'false'));
+        tab.setAttribute('aria-selected', 'true');
+        currentAgent = tab.dataset.agent;
+        updateGlobalCmd();
       });
-
-      copyGlobalBtn.addEventListener("click", () => {
-        copyText(getGlobalCmd(currentAgent), copyGlobalBtn, "COPY CMD");
+      tab.addEventListener('keydown', e => {
+        const tabs = [...document.querySelectorAll('.agent-tab')];
+        const idx = tabs.indexOf(tab);
+        if (e.key === 'ArrowRight') { e.preventDefault(); tabs[(idx+1)%tabs.length].click(); tabs[(idx+1)%tabs.length].focus(); }
+        if (e.key === 'ArrowLeft')  { e.preventDefault(); tabs[(idx-1+tabs.length)%tabs.length].click(); tabs[(idx-1+tabs.length)%tabs.length].focus(); }
       });
+    });
 
-      document.querySelectorAll(".install-mini").forEach((btn) => {
-        btn.addEventListener("click", () => {
-          copyText(getSkillCmd(btn.dataset.install, currentAgent), btn, "[ + INSTALL ]");
-        });
+    // ── Scope buttons ─────────────────────────────────────────────
+    document.querySelectorAll('.scope-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.scope-btn').forEach(b => b.setAttribute('aria-pressed', 'false'));
+        btn.setAttribute('aria-pressed', 'true');
+        currentScope = btn.dataset.scope;
+        updateGlobalCmd();
       });
+    });
 
-      document.querySelectorAll(".preview-btn").forEach((btn) => {
-        btn.addEventListener("click", async () => {
-          const path = btn.dataset.preview;
-          modalTitle.textContent = path;
-          modalBody.textContent = "Fetching from GitHub...";
-          modal.showModal();
-          try {
-            const res = await fetch(`https://raw.githubusercontent.com/sandeshPatel06/Skills/main/${path}`);
-            modalBody.textContent = res.ok ? await res.text() : `Failed to load (${res.status})`;
-          } catch (e) {
-            modalBody.textContent = "Network error loading SKILL.md.";
+    // ── Global copy ───────────────────────────────────────────────
+    copyGlobalBtn.addEventListener('click', () => {
+      copyText(getGlobalCmd(currentAgent, currentScope), copyGlobalBtn, 'COPY INSTALL CMD');
+    });
+
+    // ── Per-skill install buttons ─────────────────────────────────
+    document.querySelectorAll('.install-mini').forEach(btn => {
+      btn.addEventListener('click', () => {
+        copyText(getSkillCmd(btn.dataset.install, currentAgent, currentScope), btn, 'COPY INSTALL CMD');
+      });
+    });
+
+    // ── Preview modal ─────────────────────────────────────────────
+    function openPreview(path) {
+      const reqId = Date.now();
+      activePreviewPath = reqId;
+      modalTitleEl.textContent = path;
+      modalBody.textContent = 'Loading…';
+      modalStatus.style.display = 'none';
+      modalStatus.className = 'modal-status';
+      modalRetry.style.display = 'none';
+      const ghBase = 'https://github.com/sandeshPatel06/Skills/blob/main/';
+      modalGhLink.onclick = () => window.open(ghBase + path, '_blank', 'noopener,noreferrer');
+      modal.showModal();
+      modalBody.focus();
+
+      const url = `https://raw.githubusercontent.com/sandeshPatel06/Skills/main/${path}`;
+      fetch(url, { cache: 'no-cache' })
+        .then(r => {
+          if (activePreviewPath !== reqId) return;
+          if (r.status === 404) {
+            modalStatus.textContent = `File not found (404): ${path}`;
+            modalStatus.className = 'modal-status error';
+            modalStatus.style.display = 'block';
+            modalBody.textContent = '';
+            modalRetry.style.display = 'inline-block';
+            modalRetry.onclick = () => openPreview(path);
+            return;
           }
+          if (!r.ok) throw new Error(`HTTP ${r.status}`);
+          return r.text();
+        })
+        .then(text => {
+          if (!text || activePreviewPath !== reqId) return;
+          modalBody.textContent = text;
+        })
+        .catch(e => {
+          if (activePreviewPath !== reqId) return;
+          modalStatus.textContent = `Network error: ${e.message}. Check your connection and retry.`;
+          modalStatus.className = 'modal-status error';
+          modalStatus.style.display = 'block';
+          modalBody.textContent = '';
+          modalRetry.style.display = 'inline-block';
+          modalRetry.onclick = () => openPreview(path);
         });
+    }
+
+    document.querySelectorAll('.preview-btn, .view-config-btn').forEach(btn => {
+      btn.addEventListener('click', () => openPreview(btn.dataset.preview));
+    });
+
+    modalClose.addEventListener('click', () => { activePreviewPath = null; modal.close(); });
+    modal.addEventListener('click', e => { if (e.target === modal) { activePreviewPath = null; modal.close(); } });
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape' && modal.open) { activePreviewPath = null; modal.close(); }
+    });
+
+    // ── Search + Filter ───────────────────────────────────────────
+    function applyFilters() {
+      const q = searchInput.value.trim().toLowerCase();
+      searchClear.classList.toggle('visible', q.length > 0);
+      let visible = 0;
+
+      document.querySelectorAll('.cat-section').forEach(sec => {
+        const catMatch = currentFilter === 'all' || sec.dataset.cat === currentFilter;
+        let secVis = 0;
+        sec.querySelectorAll('.skill-row').forEach(row => {
+          const haystack = (row.textContent + ' ' + (row.dataset.keywords || '')).toLowerCase();
+          const show = catMatch && (!q || haystack.includes(q));
+          row.style.display = show ? '' : 'none';
+          if (show) { secVis++; visible++; }
+        });
+        sec.style.display = secVis ? '' : 'none';
       });
 
-      document.getElementById("modal-close").addEventListener("click", () => modal.close());
-      modal.addEventListener("click", (e) => { if (e.target === modal) modal.close(); });
+      emptyState.style.display = visible === 0 ? 'block' : 'none';
+      const countText = `${visible} resource${visible !== 1 ? 's' : ''}${q ? ` matching "${searchInput.value.trim()}"` : ''}`;
+      resultsCount.textContent = countText;
+    }
 
-      document.addEventListener("keydown", (e) => {
-        if (e.key === "/" && document.activeElement !== searchInput && !modal.open) {
-          e.preventDefault();
-          searchInput.focus();
-        }
+    document.querySelectorAll('.cat-pill').forEach(pill => {
+      pill.addEventListener('click', () => {
+        document.querySelectorAll('.cat-pill').forEach(p => p.setAttribute('aria-pressed', 'false'));
+        pill.setAttribute('aria-pressed', 'true');
+        currentFilter = pill.dataset.filter;
+        applyFilters();
       });
+    });
 
-      function applyFilters() {
-        const q = searchInput.value.trim().toLowerCase();
-        let visibleTotal = 0;
+    searchInput.addEventListener('input', applyFilters);
 
-        document.querySelectorAll(".cat-section").forEach((sec) => {
-          const catMatch = currentFilter === "all" || sec.dataset.cat === currentFilter;
-          let secVisible = 0;
+    searchClear.addEventListener('click', () => {
+      searchInput.value = '';
+      searchClear.classList.remove('visible');
+      applyFilters();
+      searchInput.focus();
+    });
 
-          sec.querySelectorAll(".skill-row").forEach((row) => {
-            const text = row.textContent.toLowerCase();
-            const match = catMatch && (!q || text.includes(q));
-            row.style.display = match ? "grid" : "none";
-            if (match) { secVisible++; visibleTotal++; }
-          });
-
-          sec.style.display = secVisible > 0 ? "block" : "none";
-        });
-
-        emptyState.style.display = visibleTotal === 0 ? "block" : "none";
+    document.addEventListener('keydown', e => {
+      if (e.key === '/' && document.activeElement !== searchInput && !modal.open) {
+        e.preventDefault();
+        searchInput.focus();
       }
+    });
 
-      document.querySelectorAll(".cat-pill").forEach((pill) => {
-        pill.addEventListener("click", () => {
-          document.querySelectorAll(".cat-pill").forEach((p) => p.setAttribute("aria-pressed", "false"));
-          pill.setAttribute("aria-pressed", "true");
-          currentFilter = pill.dataset.filter;
-          applyFilters();
-        });
-      });
-
-      searchInput.addEventListener("input", applyFilters);
-    })();
+    // ── Init ──────────────────────────────────────────────────────
+    updateGlobalCmd();
+  })();
   </script>
 </body>
 </html>
