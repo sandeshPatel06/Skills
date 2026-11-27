@@ -1,0 +1,43 @@
+# sandeshPatel06/Skills
+
+> First-party collection of 18 AI coding agent skills (`SKILL.md`) and MCP server configurations for Antigravity, Claude Code, Codex, Cursor, and OpenCode.
+
+## Install
+
+- Antigravity: `git clone https://github.com/sandeshPatel06/Skills.git ~/.gemini/config/skills`
+- Claude Code: `git clone https://github.com/sandeshPatel06/Skills.git ~/.claude/skills`
+- Codex: `git clone https://github.com/sandeshPatel06/Skills.git ~/.codex/skills`
+- Cursor: `git clone https://github.com/sandeshPatel06/Skills.git .cursor/skills`
+- OpenCode: `git clone https://github.com/sandeshPatel06/Skills.git ~/.config/opencode/skills`
+- npx skills: `npx skills add sandeshPatel06/Skills`
+
+## OneDev & tod CLI
+
+- [using-tod](https://raw.githubusercontent.com/sandeshPatel06/Skills/main/using-tod/SKILL.md): Drive OneDev issues, pull requests, and builds through the `tod` CLI.
+- [work-on-issue](https://raw.githubusercontent.com/sandeshPatel06/Skills/main/work-on-issue/SKILL.md): Create/checkout an issue branch and read issue details via `tod`.
+- [work-on-pull-request](https://raw.githubusercontent.com/sandeshPatel06/Skills/main/work-on-pull-request/SKILL.md): Review, merge, resolve conflicts, or continue work on a OneDev pull request.
+- [submit-issue-work](https://raw.githubusercontent.com/sandeshPatel06/Skills/main/submit-issue-work/SKILL.md): Submit completed work for a OneDev issue.
+- [submit-pull-request-work](https://raw.githubusercontent.com/sandeshPatel06/Skills/main/submit-pull-request-work/SKILL.md): Submit completed work for an existing OneDev pull request.
+- [submit-work](https://raw.githubusercontent.com/sandeshPatel06/Skills/main/submit-work/SKILL.md): Commit, push, and open a OneDev pull request for an issue.
+- [review-pull-request](https://raw.githubusercontent.com/sandeshPatel06/Skills/main/review-pull-request/SKILL.md): Perform a structured code review of a OneDev pull request via `tod`.
+- [issue-template](https://raw.githubusercontent.com/sandeshPatel06/Skills/main/issue-template/SKILL.md): Standard issue template format for creating OneDev issues (`@issue`).
+- [generate-commit-message](https://raw.githubusercontent.com/sandeshPatel06/Skills/main/generate-commit-message/SKILL.md): Compose commit messages conforming to `tod get-commit-message-requirement`.
+- [standup-report](https://raw.githubusercontent.com/sandeshPatel06/Skills/main/standup-report/SKILL.md): Generate a standup report from OneDev PR and issue activity.
+- [edit-build-spec](https://raw.githubusercontent.com/sandeshPatel06/Skills/main/edit-build-spec/SKILL.md): Create or edit `.onedev-buildspec.yml` using `tod` schema validation.
+- [investigate-build-failure](https://raw.githubusercontent.com/sandeshPatel06/Skills/main/investigate-build-failure/SKILL.md): Diagnose failing or suspicious OneDev builds via `tod`.
+- [fix-failed-build](https://raw.githubusercontent.com/sandeshPatel06/Skills/main/fix-failed-build/SKILL.md): Fix a prompt-specified failed OneDev build without issue/PR context.
+
+## UI/UX & Frontend
+
+- [premium-ui-ux-engineer](https://raw.githubusercontent.com/sandeshPatel06/Skills/main/premium-ui-ux-engineer/SKILL.md): Senior product designer and frontend architect guidelines for accessible UIs.
+- [anti-slop-optimizer](https://raw.githubusercontent.com/sandeshPatel06/Skills/main/anti-slop-optimizer/SKILL.md): Audit and optimize web apps to remove AI-generated design and copy tells.
+
+## Engineering & Workflows
+
+- [work-like-boss](https://raw.githubusercontent.com/sandeshPatel06/Skills/main/work-like-boss/SKILL.md): High-agency product-minded execution — source of truth first, anti-slop craft, options then lock.
+- [gh-tasks](https://raw.githubusercontent.com/sandeshPatel06/Skills/main/gh-tasks/SKILL.md): Perform GitHub tasks (repos, issues, PRs, gists, releases) via `gh` CLI (`@gh`).
+
+## Integrations & MCP Configs
+
+- [zoho-cliq-mcp](https://raw.githubusercontent.com/sandeshPatel06/Skills/main/zoho-cliq-mcp/SKILL.md): Interact with Zoho Cliq using the Zoho MCP server (`@zoho`).
+- [mcp-configs](https://raw.githubusercontent.com/sandeshPatel06/Skills/main/mcp-configs/README.md): Complete MCP server configuration examples (`complete-mcp-config.json`).
