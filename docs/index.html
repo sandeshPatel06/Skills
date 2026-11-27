@@ -4,15 +4,15 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>sandeshPatel06/Skills — 18 AI Coding Agent Skills &amp; MCP Configs</title>
-  <meta name="description" content="Install 18 production-tested AI coding agent skills for Antigravity, Claude Code, Codex, Cursor, and OpenCode. Includes OneDev (tod), UI/UX, Go, Vue, Kubernetes, and MCP configs.">
+  <meta name="description" content="Install 18 first-party AI coding agent skills for Antigravity, Claude Code, Codex, Cursor, and OpenCode. Includes OneDev (tod), UI/UX, and MCP configs.">
   <link rel="canonical" href="https://sandeshpatel06.github.io/Skills/">
   <meta property="og:type" content="website">
   <meta property="og:title" content="sandeshPatel06/Skills — AI Coding Agent Skills Directory">
-  <meta property="og:description" content="18 curated skills for Antigravity, Claude Code, Codex, Cursor, and OpenCode. One-click install commands for every agent.">
+  <meta property="og:description" content="18 first-party skills for Antigravity, Claude Code, Codex, Cursor, and OpenCode. Preview SKILL.md in-browser and copy one-click install commands.">
   <meta property="og:url" content="https://sandeshpatel06.github.io/Skills/">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="sandeshPatel06/Skills — 18 AI Agent Skills">
-  <meta name="twitter:description" content="One-click install commands for Antigravity, Claude Code, Codex, Cursor, and OpenCode.">
+  <meta name="twitter:description" content="Preview SKILL.md specs and copy one-click install commands for Antigravity, Claude Code, Codex, Cursor, and OpenCode.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
@@ -21,7 +21,7 @@
     "@context": "https://schema.org",
     "@type": "CollectionPage",
     "name": "sandeshPatel06/Skills",
-    "description": "18 AI coding agent skills and MCP configurations for Antigravity, Claude Code, Codex, Cursor, and OpenCode.",
+    "description": "18 first-party AI coding agent skills and MCP configurations for Antigravity, Claude Code, Codex, Cursor, and OpenCode.",
     "url": "https://sandeshpatel06.github.io/Skills/",
     "author": {
       "@type": "Person",
@@ -40,7 +40,6 @@
       --border: #D6D3CD;
       --accent: #0052FF;
       --accent-hover: #0040CC;
-      --accent-soft: #E8F0FF;
       --ok: #0E7C47;
       --mono: 'IBM Plex Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
       --sans: 'Space Grotesk', system-ui, -apple-system, sans-serif;
@@ -57,12 +56,13 @@
       -webkit-font-smoothing: antialiased;
     }
     a { color: inherit; text-decoration: none; }
-    .wrap { max-width: 1180px; margin: 0 auto; padding: 0 20px; }
+    .wrap { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
 
     /* Top Nav */
     .topbar {
       border-bottom: 1px solid var(--border);
-      background: var(--bg);
+      background: rgba(247, 245, 240, 0.94);
+      backdrop-filter: blur(6px);
       position: sticky;
       top: 0;
       z-index: 20;
@@ -107,32 +107,44 @@
     }
     .btn-outline:hover { background: var(--ink); color: var(--surface); }
 
-    /* Hero */
+    /* 2-Column Hero */
     .hero {
-      padding: 48px 0 36px;
+      padding: 44px 0 38px;
       border-bottom: 1px solid var(--border);
+      display: grid;
+      grid-template-columns: 1.05fr 1fr;
+      gap: 32px;
+      align-items: end;
     }
     .eyebrow {
       font-family: var(--mono);
-      font-size: 0.78rem;
+      font-size: 0.76rem;
       letter-spacing: 0.06em;
       text-transform: uppercase;
       color: var(--muted);
-      margin-bottom: 12px;
+      margin-bottom: 10px;
     }
     h1 {
-      margin: 0 0 14px;
-      font-size: clamp(2rem, 4.2vw, 3.1rem);
-      line-height: 1.08;
+      margin: 0 0 12px;
+      font-size: clamp(2rem, 3.8vw, 2.95rem);
+      line-height: 1.06;
       letter-spacing: -0.03em;
-      max-width: 18ch;
     }
     .hero-sub {
-      margin: 0 0 28px;
+      margin: 0 0 20px;
       color: var(--muted);
-      font-size: 1.05rem;
-      max-width: 62ch;
+      font-size: 1rem;
+      max-width: 54ch;
     }
+    .stats-strip {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      font-family: var(--mono);
+      font-size: 0.78rem;
+      color: var(--muted);
+    }
+    .stats-strip strong { color: var(--ink); font-size: 0.95rem; }
 
     /* Agent Switcher + Terminal Bar */
     .install-panel {
@@ -151,9 +163,9 @@
       border: 0;
       border-right: 1px solid var(--border);
       background: transparent;
-      padding: 10px 16px;
+      padding: 9px 13px;
       font-family: var(--mono);
-      font-size: 0.82rem;
+      font-size: 0.78rem;
       font-weight: 500;
       color: var(--ink);
       cursor: pointer;
@@ -171,7 +183,7 @@
       gap: 12px;
       padding: 14px 16px;
       font-family: var(--mono);
-      font-size: 0.88rem;
+      font-size: 0.84rem;
       overflow-x: auto;
     }
     .cmd-code { white-space: nowrap; }
@@ -182,7 +194,7 @@
       background: var(--accent);
       color: #fff;
       font-family: var(--mono);
-      font-size: 0.78rem;
+      font-size: 0.76rem;
       font-weight: 600;
       padding: 7px 14px;
       cursor: pointer;
@@ -217,16 +229,31 @@
       background: var(--ink);
       color: var(--surface);
     }
+    .search-wrap {
+      position: relative;
+      display: flex;
+      align-items: center;
+    }
     .search-box {
       border: 1px solid var(--border);
       background: var(--surface);
-      padding: 8px 12px;
+      padding: 8px 38px 8px 12px;
       font-family: var(--mono);
       font-size: 0.84rem;
-      min-width: 240px;
+      min-width: 260px;
       color: var(--ink);
     }
     .search-box:focus { outline: 2px solid var(--accent); outline-offset: -1px; }
+    .kbd-hint {
+      position: absolute;
+      right: 10px;
+      font-family: var(--mono);
+      font-size: 0.7rem;
+      color: var(--muted);
+      border: 1px solid var(--border);
+      padding: 1px 5px;
+      pointer-events: none;
+    }
 
     /* Category Sections */
     .cat-section { margin-bottom: 34px; }
@@ -255,7 +282,6 @@
     /* Skill Rows */
     .skill-table {
       width: 100%;
-      border-collapse: collapse;
       background: var(--surface);
       border-left: 1px solid var(--border);
       border-right: 1px solid var(--border);
@@ -304,14 +330,17 @@
     }
     .install-mini:hover { background: var(--accent-hover); }
     .install-mini.copied { background: var(--ok); border-color: var(--ok); }
-    .src-link {
+    .preview-btn, .src-link {
+      appearance: none;
       font-family: var(--mono);
       font-size: 0.74rem;
       padding: 5px 9px;
       border: 1px solid var(--border);
+      background: var(--surface);
       color: var(--ink);
+      cursor: pointer;
     }
-    .src-link:hover { border-color: var(--ink); }
+    .preview-btn:hover, .src-link:hover { border-color: var(--ink); }
 
     .empty-state {
       display: none;
@@ -324,7 +353,48 @@
       color: var(--muted);
     }
 
-    /* Footer */
+    /* Spec Preview Modal */
+    dialog#spec-modal {
+      border: 1px solid var(--ink);
+      box-shadow: 6px 6px 0 var(--ink);
+      background: var(--surface);
+      color: var(--ink);
+      max-width: 780px;
+      width: calc(100% - 32px);
+      padding: 0;
+    }
+    dialog::backdrop { background: rgba(20, 20, 19, 0.45); }
+    .modal-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 12px 16px;
+      border-bottom: 1px solid var(--border);
+      background: var(--surface-alt);
+      font-family: var(--mono);
+      font-size: 0.85rem;
+      font-weight: 600;
+    }
+    .modal-close {
+      appearance: none;
+      border: 1px solid var(--ink);
+      background: var(--surface);
+      padding: 4px 10px;
+      font-family: var(--mono);
+      font-size: 0.75rem;
+      cursor: pointer;
+    }
+    .modal-body {
+      padding: 16px;
+      max-height: 68vh;
+      overflow: auto;
+      font-family: var(--mono);
+      font-size: 0.8rem;
+      line-height: 1.55;
+      white-space: pre-wrap;
+      margin: 0;
+    }
+
     footer {
       border-top: 1px solid var(--border);
       padding: 28px 0 44px;
@@ -338,11 +408,11 @@
       gap: 12px;
     }
 
+    @media (max-width: 900px) {
+      .hero { grid-template-columns: 1fr; gap: 22px; }
+    }
     @media (max-width: 820px) {
-      .skill-row {
-        grid-template-columns: 36px 1fr;
-        gap: 6px 12px;
-      }
+      .skill-row { grid-template-columns: 36px 1fr; gap: 6px 12px; }
       .skill-desc { grid-column: 2; }
       .skill-actions { grid-column: 2; margin-top: 4px; }
     }
@@ -358,7 +428,7 @@
       <nav class="nav-links" aria-label="Primary">
         <a href="#onedev">OneDev</a>
         <a href="#uiux">UI/UX</a>
-        <a href="#infra">Infra</a>
+        <a href="#workflows">Workflows</a>
         <a href="#mcp">MCP</a>
         <a class="btn-outline" href="https://github.com/sandeshPatel06/Skills" target="_blank" rel="noopener">GitHub ↗</a>
       </nav>
@@ -367,11 +437,18 @@
 
   <main id="top" class="wrap">
     <section class="hero">
-      <div class="eyebrow">18 AGENT SKILLS // SPEC &amp; INSTALL INDEX</div>
-      <h1>Production skills for every AI coding agent.</h1>
-      <p class="hero-sub">
-        Pick your agent below to generate copy-ready install commands for OneDev (<code>tod</code>), UI/UX engineering, Go, Vue 3, Kubernetes, Tailscale, and MCP servers.
-      </p>
+      <div>
+        <div class="eyebrow">18 AGENT SKILLS // SPEC &amp; INSTALL INDEX</div>
+        <h1>First-party skills for every AI coding agent.</h1>
+        <p class="hero-sub">
+          Inspect <code>SKILL.md</code> specs in-browser and copy one-click install commands for OneDev (<code>tod</code>), UI/UX engineering, GitHub CLI, and MCP servers.
+        </p>
+        <div class="stats-strip">
+          <span><strong>18</strong> verified skills</span>
+          <span><strong>6</strong> agent targets</span>
+          <span><strong>100%</strong> first-party</span>
+        </div>
+      </div>
 
       <div class="install-panel" role="region" aria-label="Agent install command generator">
         <div class="agent-tabs" role="tablist" aria-label="Target AI Agent">
@@ -379,7 +456,7 @@
           <button class="agent-tab" role="tab" aria-selected="false" data-agent="claude">Claude Code</button>
           <button class="agent-tab" role="tab" aria-selected="false" data-agent="codex">Codex</button>
           <button class="agent-tab" role="tab" aria-selected="false" data-agent="cursor">Cursor</button>
-          <button class="agent-tab" role="tab" aria-selected="false" data-agent="opencode">OpenCode / Kilo</button>
+          <button class="agent-tab" role="tab" aria-selected="false" data-agent="opencode">OpenCode</button>
           <button class="agent-tab" role="tab" aria-selected="false" data-agent="npx">npx skills</button>
         </div>
         <div class="cmd-row">
@@ -394,10 +471,13 @@
         <button class="cat-pill" aria-pressed="true" data-filter="all">ALL (19)</button>
         <button class="cat-pill" aria-pressed="false" data-filter="onedev">OneDev &amp; tod (13)</button>
         <button class="cat-pill" aria-pressed="false" data-filter="uiux">UI/UX &amp; Frontend (2)</button>
-        <button class="cat-pill" aria-pressed="false" data-filter="infra">Engineering &amp; Workflows (2)</button>
+        <button class="cat-pill" aria-pressed="false" data-filter="workflows">Engineering &amp; Workflows (2)</button>
         <button class="cat-pill" aria-pressed="false" data-filter="mcp">Integrations &amp; MCP (2)</button>
       </div>
-      <input class="search-box" id="search-input" type="search" placeholder="Filter skills (e.g. tod, vue, k8s)..." aria-label="Filter skills">
+      <div class="search-wrap">
+        <input class="search-box" id="search-input" type="search" placeholder="Filter skills (e.g. tod, ui, mcp)..." aria-label="Filter skills">
+        <span class="kbd-hint">/</span>
+      </div>
     </section>
 
     <div id="catalog">
@@ -413,7 +493,7 @@
             <span class="skill-name"><a href="https://github.com/sandeshPatel06/Skills/tree/main/using-tod" target="_blank" rel="noopener">using-tod</a></span>
             <span class="skill-desc">Drive OneDev issues, pull requests, and builds through the <code>tod</code> CLI.</span>
             <div class="skill-actions">
-              <a class="src-link" href="https://github.com/sandeshPatel06/Skills/blob/main/using-tod/SKILL.md" target="_blank" rel="noopener">SPEC</a>
+              <button class="preview-btn" type="button" data-preview="using-tod/SKILL.md">PREVIEW</button>
               <button class="install-mini" type="button" data-install="using-tod">[ + INSTALL ]</button>
             </div>
           </div>
@@ -422,7 +502,7 @@
             <span class="skill-name"><a href="https://github.com/sandeshPatel06/Skills/tree/main/work-on-issue" target="_blank" rel="noopener">work-on-issue</a></span>
             <span class="skill-desc">Create/checkout an issue branch and read issue details via <code>tod</code>.</span>
             <div class="skill-actions">
-              <a class="src-link" href="https://github.com/sandeshPatel06/Skills/blob/main/work-on-issue/SKILL.md" target="_blank" rel="noopener">SPEC</a>
+              <button class="preview-btn" type="button" data-preview="work-on-issue/SKILL.md">PREVIEW</button>
               <button class="install-mini" type="button" data-install="work-on-issue">[ + INSTALL ]</button>
             </div>
           </div>
@@ -431,7 +511,7 @@
             <span class="skill-name"><a href="https://github.com/sandeshPatel06/Skills/tree/main/work-on-pull-request" target="_blank" rel="noopener">work-on-pull-request</a></span>
             <span class="skill-desc">Review, merge, resolve conflicts, or continue work on a OneDev pull request.</span>
             <div class="skill-actions">
-              <a class="src-link" href="https://github.com/sandeshPatel06/Skills/blob/main/work-on-pull-request/SKILL.md" target="_blank" rel="noopener">SPEC</a>
+              <button class="preview-btn" type="button" data-preview="work-on-pull-request/SKILL.md">PREVIEW</button>
               <button class="install-mini" type="button" data-install="work-on-pull-request">[ + INSTALL ]</button>
             </div>
           </div>
@@ -440,7 +520,7 @@
             <span class="skill-name"><a href="https://github.com/sandeshPatel06/Skills/tree/main/submit-issue-work" target="_blank" rel="noopener">submit-issue-work</a></span>
             <span class="skill-desc">Submit completed work for a OneDev issue.</span>
             <div class="skill-actions">
-              <a class="src-link" href="https://github.com/sandeshPatel06/Skills/blob/main/submit-issue-work/SKILL.md" target="_blank" rel="noopener">SPEC</a>
+              <button class="preview-btn" type="button" data-preview="submit-issue-work/SKILL.md">PREVIEW</button>
               <button class="install-mini" type="button" data-install="submit-issue-work">[ + INSTALL ]</button>
             </div>
           </div>
@@ -449,7 +529,7 @@
             <span class="skill-name"><a href="https://github.com/sandeshPatel06/Skills/tree/main/submit-pull-request-work" target="_blank" rel="noopener">submit-pull-request-work</a></span>
             <span class="skill-desc">Submit completed work for an existing OneDev pull request.</span>
             <div class="skill-actions">
-              <a class="src-link" href="https://github.com/sandeshPatel06/Skills/blob/main/submit-pull-request-work/SKILL.md" target="_blank" rel="noopener">SPEC</a>
+              <button class="preview-btn" type="button" data-preview="submit-pull-request-work/SKILL.md">PREVIEW</button>
               <button class="install-mini" type="button" data-install="submit-pull-request-work">[ + INSTALL ]</button>
             </div>
           </div>
@@ -458,7 +538,7 @@
             <span class="skill-name"><a href="https://github.com/sandeshPatel06/Skills/tree/main/submit-work" target="_blank" rel="noopener">submit-work</a></span>
             <span class="skill-desc">Commit, push, and open a OneDev pull request for an issue.</span>
             <div class="skill-actions">
-              <a class="src-link" href="https://github.com/sandeshPatel06/Skills/blob/main/submit-work/SKILL.md" target="_blank" rel="noopener">SPEC</a>
+              <button class="preview-btn" type="button" data-preview="submit-work/SKILL.md">PREVIEW</button>
               <button class="install-mini" type="button" data-install="submit-work">[ + INSTALL ]</button>
             </div>
           </div>
@@ -467,7 +547,7 @@
             <span class="skill-name"><a href="https://github.com/sandeshPatel06/Skills/tree/main/review-pull-request" target="_blank" rel="noopener">review-pull-request</a></span>
             <span class="skill-desc">Perform a structured code review of a OneDev pull request via <code>tod</code>.</span>
             <div class="skill-actions">
-              <a class="src-link" href="https://github.com/sandeshPatel06/Skills/blob/main/review-pull-request/SKILL.md" target="_blank" rel="noopener">SPEC</a>
+              <button class="preview-btn" type="button" data-preview="review-pull-request/SKILL.md">PREVIEW</button>
               <button class="install-mini" type="button" data-install="review-pull-request">[ + INSTALL ]</button>
             </div>
           </div>
@@ -476,7 +556,7 @@
             <span class="skill-name"><a href="https://github.com/sandeshPatel06/Skills/tree/main/issue-template" target="_blank" rel="noopener">issue-template</a></span>
             <span class="skill-desc">Standard issue template format for creating OneDev issues (<code>@issue</code>).</span>
             <div class="skill-actions">
-              <a class="src-link" href="https://github.com/sandeshPatel06/Skills/blob/main/issue-template/SKILL.md" target="_blank" rel="noopener">SPEC</a>
+              <button class="preview-btn" type="button" data-preview="issue-template/SKILL.md">PREVIEW</button>
               <button class="install-mini" type="button" data-install="issue-template">[ + INSTALL ]</button>
             </div>
           </div>
@@ -485,7 +565,7 @@
             <span class="skill-name"><a href="https://github.com/sandeshPatel06/Skills/tree/main/generate-commit-message" target="_blank" rel="noopener">generate-commit-message</a></span>
             <span class="skill-desc">Compose commit messages conforming to <code>tod get-commit-message-requirement</code>.</span>
             <div class="skill-actions">
-              <a class="src-link" href="https://github.com/sandeshPatel06/Skills/blob/main/generate-commit-message/SKILL.md" target="_blank" rel="noopener">SPEC</a>
+              <button class="preview-btn" type="button" data-preview="generate-commit-message/SKILL.md">PREVIEW</button>
               <button class="install-mini" type="button" data-install="generate-commit-message">[ + INSTALL ]</button>
             </div>
           </div>
@@ -494,7 +574,7 @@
             <span class="skill-name"><a href="https://github.com/sandeshPatel06/Skills/tree/main/standup-report" target="_blank" rel="noopener">standup-report</a></span>
             <span class="skill-desc">Generate a standup report from OneDev PR and issue activity.</span>
             <div class="skill-actions">
-              <a class="src-link" href="https://github.com/sandeshPatel06/Skills/blob/main/standup-report/SKILL.md" target="_blank" rel="noopener">SPEC</a>
+              <button class="preview-btn" type="button" data-preview="standup-report/SKILL.md">PREVIEW</button>
               <button class="install-mini" type="button" data-install="standup-report">[ + INSTALL ]</button>
             </div>
           </div>
@@ -503,7 +583,7 @@
             <span class="skill-name"><a href="https://github.com/sandeshPatel06/Skills/tree/main/edit-build-spec" target="_blank" rel="noopener">edit-build-spec</a></span>
             <span class="skill-desc">Create or edit <code>.onedev-buildspec.yml</code> using <code>tod</code> schema validation.</span>
             <div class="skill-actions">
-              <a class="src-link" href="https://github.com/sandeshPatel06/Skills/blob/main/edit-build-spec/SKILL.md" target="_blank" rel="noopener">SPEC</a>
+              <button class="preview-btn" type="button" data-preview="edit-build-spec/SKILL.md">PREVIEW</button>
               <button class="install-mini" type="button" data-install="edit-build-spec">[ + INSTALL ]</button>
             </div>
           </div>
@@ -512,7 +592,7 @@
             <span class="skill-name"><a href="https://github.com/sandeshPatel06/Skills/tree/main/investigate-build-failure" target="_blank" rel="noopener">investigate-build-failure</a></span>
             <span class="skill-desc">Diagnose failing or suspicious OneDev builds via <code>tod</code>.</span>
             <div class="skill-actions">
-              <a class="src-link" href="https://github.com/sandeshPatel06/Skills/blob/main/investigate-build-failure/SKILL.md" target="_blank" rel="noopener">SPEC</a>
+              <button class="preview-btn" type="button" data-preview="investigate-build-failure/SKILL.md">PREVIEW</button>
               <button class="install-mini" type="button" data-install="investigate-build-failure">[ + INSTALL ]</button>
             </div>
           </div>
@@ -521,7 +601,7 @@
             <span class="skill-name"><a href="https://github.com/sandeshPatel06/Skills/tree/main/fix-failed-build" target="_blank" rel="noopener">fix-failed-build</a></span>
             <span class="skill-desc">Fix a prompt-specified failed OneDev build without issue/PR context.</span>
             <div class="skill-actions">
-              <a class="src-link" href="https://github.com/sandeshPatel06/Skills/blob/main/fix-failed-build/SKILL.md" target="_blank" rel="noopener">SPEC</a>
+              <button class="preview-btn" type="button" data-preview="fix-failed-build/SKILL.md">PREVIEW</button>
               <button class="install-mini" type="button" data-install="fix-failed-build">[ + INSTALL ]</button>
             </div>
           </div>
@@ -540,7 +620,7 @@
             <span class="skill-name"><a href="https://github.com/sandeshPatel06/Skills/tree/main/premium-ui-ux-engineer" target="_blank" rel="noopener">premium-ui-ux-engineer</a></span>
             <span class="skill-desc">Senior product designer and frontend architect guidelines for accessible UIs.</span>
             <div class="skill-actions">
-              <a class="src-link" href="https://github.com/sandeshPatel06/Skills/blob/main/premium-ui-ux-engineer/SKILL.md" target="_blank" rel="noopener">SPEC</a>
+              <button class="preview-btn" type="button" data-preview="premium-ui-ux-engineer/SKILL.md">PREVIEW</button>
               <button class="install-mini" type="button" data-install="premium-ui-ux-engineer">[ + INSTALL ]</button>
             </div>
           </div>
@@ -549,35 +629,35 @@
             <span class="skill-name"><a href="https://github.com/sandeshPatel06/Skills/tree/main/anti-slop-optimizer" target="_blank" rel="noopener">anti-slop-optimizer</a></span>
             <span class="skill-desc">Audit and optimize web apps to remove AI-generated design and copy tells.</span>
             <div class="skill-actions">
-              <a class="src-link" href="https://github.com/sandeshPatel06/Skills/blob/main/anti-slop-optimizer/SKILL.md" target="_blank" rel="noopener">SPEC</a>
+              <button class="preview-btn" type="button" data-preview="anti-slop-optimizer/SKILL.md">PREVIEW</button>
               <button class="install-mini" type="button" data-install="anti-slop-optimizer">[ + INSTALL ]</button>
             </div>
           </div>
         </div>
       </section>
 
-      <!-- 03 INFRA -->
-      <section class="cat-section" id="infra" data-cat="infra">
+      <!-- 03 WORKFLOWS -->
+      <section class="cat-section" id="workflows" data-cat="workflows">
         <div class="cat-header">
           <h2 class="cat-title">03 // Engineering &amp; Workflows</h2>
           <span class="cat-count">2 SKILLS</span>
         </div>
         <div class="skill-table">
-          <div class="skill-row" data-skill="work-like-boss" data-cat="infra">
-            <span class="skill-id">18</span>
+          <div class="skill-row" data-skill="work-like-boss" data-cat="workflows">
+            <span class="skill-id">16</span>
             <span class="skill-name"><a href="https://github.com/sandeshPatel06/Skills/tree/main/work-like-boss" target="_blank" rel="noopener">work-like-boss</a></span>
             <span class="skill-desc">High-agency product-minded execution — source of truth first, anti-slop craft, options then lock.</span>
             <div class="skill-actions">
-              <a class="src-link" href="https://github.com/sandeshPatel06/Skills/blob/main/work-like-boss/SKILL.md" target="_blank" rel="noopener">SPEC</a>
+              <button class="preview-btn" type="button" data-preview="work-like-boss/SKILL.md">PREVIEW</button>
               <button class="install-mini" type="button" data-install="work-like-boss">[ + INSTALL ]</button>
             </div>
           </div>
-          <div class="skill-row" data-skill="gh-tasks" data-cat="infra">
-            <span class="skill-id">21</span>
+          <div class="skill-row" data-skill="gh-tasks" data-cat="workflows">
+            <span class="skill-id">17</span>
             <span class="skill-name"><a href="https://github.com/sandeshPatel06/Skills/tree/main/gh-tasks" target="_blank" rel="noopener">gh-tasks</a></span>
             <span class="skill-desc">Perform GitHub tasks (repos, issues, PRs, gists, releases) via <code>gh</code> CLI (<code>@gh</code>).</span>
             <div class="skill-actions">
-              <a class="src-link" href="https://github.com/sandeshPatel06/Skills/blob/main/gh-tasks/SKILL.md" target="_blank" rel="noopener">SPEC</a>
+              <button class="preview-btn" type="button" data-preview="gh-tasks/SKILL.md">PREVIEW</button>
               <button class="install-mini" type="button" data-install="gh-tasks">[ + INSTALL ]</button>
             </div>
           </div>
@@ -592,20 +672,20 @@
         </div>
         <div class="skill-table">
           <div class="skill-row" data-skill="zoho-cliq-mcp" data-cat="mcp">
-            <span class="skill-id">24</span>
+            <span class="skill-id">18</span>
             <span class="skill-name"><a href="https://github.com/sandeshPatel06/Skills/tree/main/zoho-cliq-mcp" target="_blank" rel="noopener">zoho-cliq-mcp</a></span>
             <span class="skill-desc">Interact with Zoho Cliq using the Zoho MCP server (<code>@zoho</code>).</span>
             <div class="skill-actions">
-              <a class="src-link" href="https://github.com/sandeshPatel06/Skills/blob/main/zoho-cliq-mcp/SKILL.md" target="_blank" rel="noopener">SPEC</a>
+              <button class="preview-btn" type="button" data-preview="zoho-cliq-mcp/SKILL.md">PREVIEW</button>
               <button class="install-mini" type="button" data-install="zoho-cliq-mcp">[ + INSTALL ]</button>
             </div>
           </div>
           <div class="skill-row" data-skill="mcp-configs" data-cat="mcp">
-            <span class="skill-id">25</span>
+            <span class="skill-id">19</span>
             <span class="skill-name"><a href="https://github.com/sandeshPatel06/Skills/tree/main/mcp-configs" target="_blank" rel="noopener">mcp-configs</a></span>
             <span class="skill-desc">Complete MCP server configuration examples (<code>complete-mcp-config.json</code>).</span>
             <div class="skill-actions">
-              <a class="src-link" href="https://github.com/sandeshPatel06/Skills/blob/main/mcp-configs/README.md" target="_blank" rel="noopener">DOCS</a>
+              <button class="preview-btn" type="button" data-preview="mcp-configs/README.md">PREVIEW</button>
               <button class="install-mini" type="button" data-install="mcp-configs">[ + INSTALL ]</button>
             </div>
           </div>
@@ -616,10 +696,18 @@
     <div class="empty-state" id="empty-state">No skills match your filter.</div>
 
     <footer>
-      <span>sandeshPatel06/Skills · Open-source AI agent skills</span>
+      <span>sandeshPatel06/Skills · First-party AI agent skills</span>
       <span><a href="https://github.com/sandeshPatel06/Skills" target="_blank" rel="noopener">github.com/sandeshPatel06/Skills</a></span>
     </footer>
   </main>
+
+  <dialog id="spec-modal" aria-labelledby="modal-title">
+    <div class="modal-head">
+      <span id="modal-title">SKILL.md</span>
+      <button class="modal-close" id="modal-close" type="button">ESC / CLOSE</button>
+    </div>
+    <pre class="modal-body" id="modal-body">Loading...</pre>
+  </dialog>
 
   <script>
     (function () {
@@ -639,6 +727,9 @@
       const copyGlobalBtn = document.getElementById("copy-global");
       const searchInput = document.getElementById("search-input");
       const emptyState = document.getElementById("empty-state");
+      const modal = document.getElementById("spec-modal");
+      const modalTitle = document.getElementById("modal-title");
+      const modalBody = document.getElementById("modal-body");
 
       function getGlobalCmd(agent) {
         if (agent === "npx") return "npx skills add sandeshPatel06/Skills";
@@ -647,13 +738,11 @@
 
       function getSkillCmd(skill, agent) {
         if (agent === "npx") return `npx skills add sandeshPatel06/Skills --skill ${skill}`;
-        const dest = `${AGENT_PATHS[agent]}/${skill}`;
-        return `npx degit sandeshPatel06/Skills/${skill} ${dest}`;
+        return `npx degit sandeshPatel06/Skills/${skill} ${AGENT_PATHS[agent]}/${skill}`;
       }
 
       function updateGlobalCmd() {
-        const cmd = getGlobalCmd(currentAgent);
-        globalCmdEl.innerHTML = `<span class="cmd-prompt">$</span>${cmd}`;
+        globalCmdEl.innerHTML = `<span class="cmd-prompt">$</span>${getGlobalCmd(currentAgent)}`;
       }
 
       function copyText(text, btn, originalLabel) {
@@ -684,6 +773,31 @@
         btn.addEventListener("click", () => {
           copyText(getSkillCmd(btn.dataset.install, currentAgent), btn, "[ + INSTALL ]");
         });
+      });
+
+      document.querySelectorAll(".preview-btn").forEach((btn) => {
+        btn.addEventListener("click", async () => {
+          const path = btn.dataset.preview;
+          modalTitle.textContent = path;
+          modalBody.textContent = "Fetching from GitHub...";
+          modal.showModal();
+          try {
+            const res = await fetch(`https://raw.githubusercontent.com/sandeshPatel06/Skills/main/${path}`);
+            modalBody.textContent = res.ok ? await res.text() : `Failed to load (${res.status})`;
+          } catch (e) {
+            modalBody.textContent = "Network error loading SKILL.md.";
+          }
+        });
+      });
+
+      document.getElementById("modal-close").addEventListener("click", () => modal.close());
+      modal.addEventListener("click", (e) => { if (e.target === modal) modal.close(); });
+
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "/" && document.activeElement !== searchInput && !modal.open) {
+          e.preventDefault();
+          searchInput.focus();
+        }
       });
 
       function applyFilters() {
