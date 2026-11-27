@@ -1,6 +1,6 @@
 # Skills
 
-A curated collection of AI coding agent skills, workflows, and MCP configurations for OneDev (`tod`), GitHub (`gh`), UI/UX engineering, infrastructure, and code quality.
+A curated collection of AI coding agent skills, workflows, and MCP configurations for OneDev (`tod`), GitHub (`gh`), UI/UX engineering, and high-agency workflows.
 
 ## Available Skills
 
@@ -28,19 +28,13 @@ A curated collection of AI coding agent skills, workflows, and MCP configuration
 |-------|-------------|
 | [premium-ui-ux-engineer](premium-ui-ux-engineer/SKILL.md) | Senior product designer and frontend architect guidelines for modern, accessible UIs |
 | [anti-slop-optimizer](anti-slop-optimizer/SKILL.md) | Audit and optimize web apps to remove AI-generated design/copy tells |
-| [vue-best-practices](vue-best-practices/SKILL.md) | Vue 3 best practices using Composition API with `<script setup>` and TypeScript |
-| [kmp-glassmorphism-ui](kmp-glassmorphism-ui/SKILL.md) | Production-grade Glassmorphism design system for Kotlin Multiplatform Compose |
 
-### Engineering, Infra & Workflows
+### Engineering & Workflows
 
 | Skill | Description |
 |-------|-------------|
 | [work-like-boss](work-like-boss/SKILL.md) | High-agency product-minded execution — source of truth first, anti-slop craft, options then lock |
-| [code-review-commons](code-review-commons/SKILL.md) | Common guidelines, persona, and constraints for code reviews |
-| [golang-code-style](golang-code-style/SKILL.md) | Go code style conventions — line length, variable declarations, control flow |
 | [gh-tasks](gh-tasks/SKILL.md) | Perform GitHub tasks (repos, issues, PRs, gists, releases) via `gh` CLI (`@gh`) |
-| [kubectl-skill](kubectl-skill/SKILL.md) | Manage Kubernetes clusters, deployments, and pod diagnostics via `kubectl` |
-| [deploying-tailscale-for-zero-trust-vpn](deploying-tailscale-for-zero-trust-vpn/SKILL.md) | Deploy Tailscale for zero-trust VPN networking |
 
 ### Integrations & Configs
 
